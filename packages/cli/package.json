@@ -1,6 +1,6 @@
 {
   "name": "skillsforllms",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "CLI for syncing installable AI skill packages into projects.",
   "type": "module",
   "license": "MIT",

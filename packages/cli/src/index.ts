@@ -241,15 +241,36 @@ export async function syncCommand(packages: string[], options: SyncOptions = {})
       }
 
       const skillSource = path.join(packagePath, "SKILL.md");
-      if (!(await fs.pathExists(skillSource))) {
+      const skillsDirSource = path.join(packagePath, "skills");
+
+      const hasRootSkill = await fs.pathExists(skillSource);
+      const hasSkillsDir = await fs.pathExists(skillsDirSource);
+
+      if (!hasRootSkill && !hasSkillsDir) {
         skipped++;
-        log(pc.yellow(`! ${packageName} has no SKILL.md; skipping.`));
+        log(pc.yellow(`! ${packageName} has no SKILL.md or skills/ folder; skipping.`));
         continue;
       }
 
       const metadata = await readSkillPackageMetadata(packagePath, packageName);
       await fs.ensureDir(destDir);
-      await fs.copyFile(skillSource, path.join(destDir, "SKILL.md"));
+
+      if (hasRootSkill) {
+        await fs.copyFile(skillSource, path.join(destDir, "SKILL.md"));
+        log(`${pc.green("✓")} ${packageName} ${pc.dim(`v${metadata.version} -> ${path.relative(root, destDir)}/SKILL.md`)}`);
+      }
+
+      if (hasSkillsDir) {
+        const files = await fs.readdir(skillsDirSource);
+        let skillsCount = 0;
+        for (const file of files) {
+          if (file.endsWith(".md")) {
+            await fs.copyFile(path.join(skillsDirSource, file), path.join(destDir, file));
+            skillsCount++;
+          }
+        }
+        log(`${pc.green("✓")} ${packageName} ${pc.dim(`v${metadata.version} -> ${path.relative(root, destDir)}/ (${skillsCount} skills)`)}`);
+      }
 
       if (includeExamples) {
         const examplesSource = path.join(packagePath, "examples");
@@ -260,7 +281,6 @@ export async function syncCommand(packages: string[], options: SyncOptions = {})
 
       synced++;
       syncedSkills.push(shortName);
-      log(`${pc.green("✓")} ${packageName} ${pc.dim(`v${metadata.version} -> ${path.relative(root, destDir)}/SKILL.md`)}`);
     } catch (error_) {
       skipped++;
       error(`✗ ${packageName} failed: ${(error_ as Error).message}`);
@@ -280,16 +300,24 @@ export async function syncCommand(packages: string[], options: SyncOptions = {})
   }
 
   log("");
-  log(pc.bold(`${synced} skill${synced === 1 ? "" : "s"} synced`));
+  log(pc.bold(`${synced} skill package${synced === 1 ? "" : "s"} synced`));
   if (skipped > 0) log(pc.yellow(`${skipped} skipped`));
 }
 
 async function writeIndex(outputDir: string): Promise<void> {
   const entries = await fs.readdir(outputDir).catch(() => []);
-  const skills = [];
+  const skillsList: string[] = [];
+
   for (const entry of entries) {
-    if (await fs.pathExists(path.join(outputDir, entry, "SKILL.md"))) {
-      skills.push(entry);
+    const entryPath = path.join(outputDir, entry);
+    const stat = await fs.stat(entryPath).catch(() => null);
+    if (!stat || !stat.isDirectory()) continue;
+
+    const files = await fs.readdir(entryPath).catch(() => []);
+    for (const file of files) {
+      if (file.endsWith(".md") && file !== "INDEX.md") {
+        skillsList.push(`${entry}/${file}`);
+      }
     }
   }
 
@@ -299,7 +327,7 @@ async function writeIndex(outputDir: string): Promise<void> {
     "",
     "## Skills in this project",
     "",
-    ...skills.sort().map((name) => `- [${name}](./${name}/SKILL.md)`),
+    ...skillsList.sort().map((relPath) => `- [${path.basename(relPath, ".md")}](${relPath})`),
     "",
     "## Usage",
     "Point your AI agent to the relevant files in this directory.",
@@ -310,9 +338,23 @@ async function writeIndex(outputDir: string): Promise<void> {
 }
 
 async function runAdapter(adapter: AdapterName, outputDir: string, root: string): Promise<void> {
-  const skills = (await fs.readdir(outputDir))
-    .filter((name) => fs.pathExistsSync(path.join(outputDir, name, "SKILL.md")))
-    .sort();
+  const entries = await fs.readdir(outputDir).catch(() => []);
+  const skillsList: string[] = [];
+
+  for (const entry of entries) {
+    const entryPath = path.join(outputDir, entry);
+    const stat = await fs.stat(entryPath).catch(() => null);
+    if (!stat || !stat.isDirectory()) continue;
+
+    const files = await fs.readdir(entryPath).catch(() => []);
+    for (const file of files) {
+      if (file.endsWith(".md") && file !== "INDEX.md") {
+        skillsList.push(`${entry}/${file}`);
+      }
+    }
+  }
+
+  skillsList.sort();
 
   if (adapter === "cursor") {
     const rulesPath = path.join(root, ".cursorrules");
@@ -320,7 +362,7 @@ async function runAdapter(adapter: AdapterName, outputDir: string, root: string)
     const end = "# === SkillsForLLMs generated end ===";
     const existing = await fs.readFile(rulesPath, "utf8").catch(() => "");
     const preserved = existing.replace(new RegExp(`\\n?${escapeRegExp(start)}[\\s\\S]*?${escapeRegExp(end)}\\n?`, "m"), "\n").trim();
-    const generated = await renderConcatenatedSkills(outputDir, skills);
+    const generated = await renderConcatenatedSkills(outputDir, skillsList);
     const next = [preserved, start, generated, end].filter(Boolean).join("\n\n") + "\n";
     await fs.writeFile(rulesPath, next);
     log(pc.cyan("-> Adapter cursor wrote .cursorrules"));
@@ -329,7 +371,7 @@ async function runAdapter(adapter: AdapterName, outputDir: string, root: string)
   if (adapter === "copilot") {
     const githubDir = path.join(root, ".github");
     await fs.ensureDir(githubDir);
-    const generated = await renderConcatenatedSkills(outputDir, skills);
+    const generated = await renderConcatenatedSkills(outputDir, skillsList);
     await fs.writeFile(
       path.join(githubDir, "copilot-instructions.md"),
       `# Copilot Instructions\n> Auto-generated by skillsforllms.\n\n${generated}\n`
@@ -338,7 +380,7 @@ async function runAdapter(adapter: AdapterName, outputDir: string, root: string)
   }
 
   if (adapter === "claude") {
-    const generated = await renderConcatenatedSkills(outputDir, skills, "\n\n---\n\n");
+    const generated = await renderConcatenatedSkills(outputDir, skillsList, "\n\n---\n\n");
     await fs.writeFile(
       path.join(outputDir, "CLAUDE_PROJECT.md"),
       `# Claude Project Skills\n> Generated by skillsforllms on ${new Date().toISOString().slice(0, 10)}.\n\n${generated}\n`
@@ -349,8 +391,9 @@ async function runAdapter(adapter: AdapterName, outputDir: string, root: string)
   if (adapter === "continue") {
     const contextDir = path.join(root, ".continue", "context");
     await fs.ensureDir(contextDir);
-    for (const skill of skills) {
-      await fs.copyFile(path.join(outputDir, skill, "SKILL.md"), path.join(contextDir, `${skill}.md`));
+    for (const skill of skillsList) {
+      const baseName = path.basename(skill);
+      await fs.copyFile(path.join(outputDir, skill), path.join(contextDir, baseName));
     }
     log(pc.cyan("-> Adapter continue wrote .continue/context/"));
   }
@@ -359,8 +402,9 @@ async function runAdapter(adapter: AdapterName, outputDir: string, root: string)
 async function renderConcatenatedSkills(outputDir: string, skills: string[], separator = "\n\n"): Promise<string> {
   const chunks = [];
   for (const skill of skills) {
-    const content = await fs.readFile(path.join(outputDir, skill, "SKILL.md"), "utf8");
-    chunks.push(`## Skill: ${skill}\n\n${content}`);
+    const content = await fs.readFile(path.join(outputDir, skill), "utf8");
+    const skillName = path.basename(skill, ".md");
+    chunks.push(`## Skill: ${skillName}\n\n${content}`);
   }
   return chunks.join(separator);
 }
