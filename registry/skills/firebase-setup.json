@@ -1,0 +1,24 @@
+{
+  "name": "Firebase Setup",
+  "package": "@skillsforllms/firebase-setup",
+  "version": "1.0.0",
+  "category": "backend",
+  "description": "AI skill: Firebase app setup conventions for Auth, Firestore, Storage, Functions, and rules.",
+  "tags": [
+    "firebase",
+    "firestore",
+    "auth",
+    "functions",
+    "security-rules"
+  ],
+  "author": "Automata AI",
+  "compatibleAgents": [
+    "claude",
+    "cursor",
+    "copilot",
+    "continue"
+  ],
+  "shortName": "firebase-setup",
+  "weeklyDownloads": null,
+  "source": "skills/firebase-setup"
+}

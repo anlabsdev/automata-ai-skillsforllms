@@ -1,0 +1,56 @@
+{
+  "name": "skillsforllms-monorepo",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Installable AI skill packages for LLM agents, workflows, and automation.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anlabsdev/automata-ai-skillsforllms.git"
+  },
+  "homepage": "https://github.com/anlabsdev/automata-ai-skillsforllms#readme",
+  "bugs": {
+    "url": "https://github.com/anlabsdev/automata-ai-skillsforllms/issues"
+  },
+  "packageManager": "pnpm@9.15.4",
+  "scripts": {
+    "build": "turbo build",
+    "check": "turbo check",
+    "dev": "turbo dev --parallel",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "generate:registry": "node scripts/generate-registry.mjs",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "lint:ts": "turbo lint",
+    "test": "turbo test",
+    "validate:skills": "pnpm --filter skillsforllms build && node packages/cli/dist/index.js validate \"skills/*/SKILL.md\""
+  },
+  "keywords": [
+    "llm",
+    "ai-agent",
+    "skills",
+    "skillsforllms"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "@skillsforllms/auth-setup": "workspace:*",
+    "@skillsforllms/firebase-setup": "workspace:*",
+    "@skillsforllms/nextjs-setup": "workspace:*",
+    "@skillsforllms/node-rest-api": "workspace:*",
+    "@skillsforllms/react-setup": "workspace:*",
+    "@changesets/cli": "^2.27.12",
+    "@eslint/js": "^9.17.0",
+    "@types/fs-extra": "^11.0.4",
+    "@types/node": "^22.10.7",
+    "@vitejs/plugin-react": "^4.3.4",
+    "eslint": "^9.17.0",
+    "globals": "^15.14.0",
+    "prettier": "^3.4.2",
+    "skillsforllms": "workspace:*",
+    "turbo": "^2.3.3",
+    "typescript": "^5.7.3",
+    "typescript-eslint": "^8.19.0",
+    "vite": "^6.0.7",
+    "vitest": "^2.1.8"
+  }
+}

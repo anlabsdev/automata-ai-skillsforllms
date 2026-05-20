@@ -1,0 +1,20 @@
+node_modules/
+dist/
+dist-types/
+.turbo/
+.vite/
+coverage/
+.env
+.env.*
+!.env.example
+
+# Skills are intended to be committed in consuming projects, not here.
+.skills/
+.skills-*/
+.devserver.*.log
+
+# OS / IDE junk
+desktop.ini
+Thumbs.db
+.DS_Store
+*.tgz

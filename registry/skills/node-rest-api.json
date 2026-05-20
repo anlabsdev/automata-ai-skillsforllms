@@ -1,0 +1,24 @@
+{
+  "name": "Node Rest Api",
+  "package": "@skillsforllms/node-rest-api",
+  "version": "1.0.0",
+  "category": "backend",
+  "description": "AI skill: Node.js REST API conventions with TypeScript, validation, auth, and tests.",
+  "tags": [
+    "node",
+    "express",
+    "typescript",
+    "rest",
+    "zod"
+  ],
+  "author": "Automata AI",
+  "compatibleAgents": [
+    "claude",
+    "cursor",
+    "copilot",
+    "continue"
+  ],
+  "shortName": "node-rest-api",
+  "weeklyDownloads": null,
+  "source": "skills/node-rest-api"
+}

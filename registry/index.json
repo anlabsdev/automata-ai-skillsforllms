@@ -1,0 +1,150 @@
+{
+  "generatedAt": "2026-05-19T11:14:24.255Z",
+  "skills": [
+    {
+      "name": "Auth Setup",
+      "package": "@skillsforllms/auth-setup",
+      "version": "1.0.0",
+      "category": "security",
+      "description": "AI skill: authentication and authorization conventions for web applications.",
+      "tags": [
+        "auth",
+        "rbac",
+        "sessions",
+        "security"
+      ],
+      "author": "Automata AI",
+      "compatibleAgents": [
+        "claude",
+        "cursor",
+        "copilot",
+        "continue"
+      ],
+      "shortName": "auth-setup",
+      "weeklyDownloads": null,
+      "source": "skills/auth-setup"
+    },
+    {
+      "name": "Firebase Setup",
+      "package": "@skillsforllms/firebase-setup",
+      "version": "1.0.0",
+      "category": "backend",
+      "description": "AI skill: Firebase app setup conventions for Auth, Firestore, Storage, Functions, and rules.",
+      "tags": [
+        "firebase",
+        "firestore",
+        "auth",
+        "functions",
+        "security-rules"
+      ],
+      "author": "Automata AI",
+      "compatibleAgents": [
+        "claude",
+        "cursor",
+        "copilot",
+        "continue"
+      ],
+      "shortName": "firebase-setup",
+      "weeklyDownloads": null,
+      "source": "skills/firebase-setup"
+    },
+    {
+      "name": "Nextjs Setup",
+      "package": "@skillsforllms/nextjs-setup",
+      "version": "1.0.0",
+      "category": "web",
+      "description": "AI skill: Next.js App Router conventions for production applications.",
+      "tags": [
+        "nextjs",
+        "app-router",
+        "react",
+        "typescript"
+      ],
+      "author": "Automata AI",
+      "compatibleAgents": [
+        "claude",
+        "cursor",
+        "copilot",
+        "continue"
+      ],
+      "shortName": "nextjs-setup",
+      "weeklyDownloads": null,
+      "source": "skills/nextjs-setup"
+    },
+    {
+      "name": "Node Rest Api",
+      "package": "@skillsforllms/node-rest-api",
+      "version": "1.0.0",
+      "category": "backend",
+      "description": "AI skill: Node.js REST API conventions with TypeScript, validation, auth, and tests.",
+      "tags": [
+        "node",
+        "express",
+        "typescript",
+        "rest",
+        "zod"
+      ],
+      "author": "Automata AI",
+      "compatibleAgents": [
+        "claude",
+        "cursor",
+        "copilot",
+        "continue"
+      ],
+      "shortName": "node-rest-api",
+      "weeklyDownloads": null,
+      "source": "skills/node-rest-api"
+    },
+    {
+      "name": "React Setup",
+      "package": "@skillsforllms/react-setup",
+      "version": "1.0.0",
+      "category": "web",
+      "description": "AI skill: React + Vite + TypeScript project setup conventions for LLM agents.",
+      "tags": [
+        "react",
+        "vite",
+        "typescript",
+        "tailwind"
+      ],
+      "author": "Automata AI",
+      "compatibleAgents": [
+        "claude",
+        "cursor",
+        "copilot",
+        "continue"
+      ],
+      "shortName": "react-setup",
+      "weeklyDownloads": null,
+      "source": "skills/react-setup"
+    },
+    {
+      "name": "React Skills Pack",
+      "package": "@skillsforllms/reactskills",
+      "version": "1.0.0",
+      "category": "web",
+      "description": "AI skill: 8 complete, production-ready React.js skill files covering components, hooks, state, forms, routing, testing, and performance.",
+      "tags": [
+        "react",
+        "hooks",
+        "components",
+        "state",
+        "routing",
+        "forms",
+        "testing",
+        "performance"
+      ],
+      "author": "ANlabs",
+      "compatibleAgents": [
+        "claude",
+        "cursor",
+        "copilot",
+        "continue",
+        "windsurf"
+      ],
+      "shortName": "reactskills",
+      "weeklyDownloads": null,
+      "source": "reactskills"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "name": "Nextjs Setup",
+  "package": "@skillsforllms/nextjs-setup",
+  "version": "1.0.0",
+  "category": "web",
+  "description": "AI skill: Next.js App Router conventions for production applications.",
+  "tags": [
+    "nextjs",
+    "app-router",
+    "react",
+    "typescript"
+  ],
+  "author": "Automata AI",
+  "compatibleAgents": [
+    "claude",
+    "cursor",
+    "copilot",
+    "continue"
+  ],
+  "shortName": "nextjs-setup",
+  "weeklyDownloads": null,
+  "source": "skills/nextjs-setup"
+}

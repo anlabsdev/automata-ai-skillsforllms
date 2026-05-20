@@ -1,0 +1,23 @@
+{
+  "name": "Auth Setup",
+  "package": "@skillsforllms/auth-setup",
+  "version": "1.0.0",
+  "category": "security",
+  "description": "AI skill: authentication and authorization conventions for web applications.",
+  "tags": [
+    "auth",
+    "rbac",
+    "sessions",
+    "security"
+  ],
+  "author": "Automata AI",
+  "compatibleAgents": [
+    "claude",
+    "cursor",
+    "copilot",
+    "continue"
+  ],
+  "shortName": "auth-setup",
+  "weeklyDownloads": null,
+  "source": "skills/auth-setup"
+}

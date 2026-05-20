@@ -1,0 +1,23 @@
+{
+  "name": "@skillsforllms/nextjs-setup",
+  "version": "1.0.0",
+  "description": "AI skill: Next.js App Router conventions for production applications.",
+  "keywords": ["llm", "ai-agent", "skill", "nextjs", "react", "typescript", "skillsforllms"],
+  "license": "MIT",
+  "author": "Automata AI",
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": ["SKILL.md", "examples/", "README.md"],
+  "skillsforllms": {
+    "category": "web",
+    "tags": ["nextjs", "app-router", "react", "typescript"],
+    "compatibleAgents": ["claude", "cursor", "copilot", "continue"]
+  },
+  "scripts": {
+    "build": "node -e \"console.log('skill package: no build needed')\"",
+    "check": "node -e \"console.log('skill package: no typecheck needed')\"",
+    "lint": "node -e \"console.log('skill package: no lint needed')\"",
+    "test": "node -e \"console.log('skill package: no tests needed')\""
+  }
+}

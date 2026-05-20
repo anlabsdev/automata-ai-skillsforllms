@@ -1,0 +1,23 @@
+{
+  "name": "React Setup",
+  "package": "@skillsforllms/react-setup",
+  "version": "1.0.0",
+  "category": "web",
+  "description": "AI skill: React + Vite + TypeScript project setup conventions for LLM agents.",
+  "tags": [
+    "react",
+    "vite",
+    "typescript",
+    "tailwind"
+  ],
+  "author": "Automata AI",
+  "compatibleAgents": [
+    "claude",
+    "cursor",
+    "copilot",
+    "continue"
+  ],
+  "shortName": "react-setup",
+  "weeklyDownloads": null,
+  "source": "skills/react-setup"
+}

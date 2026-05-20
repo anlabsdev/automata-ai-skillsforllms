@@ -1,0 +1,11 @@
+{
+  "outputDir": ".skills",
+  "includeExamples": false,
+  "autoSync": true,
+  "agents": {
+    "cursor": false,
+    "copilot": false,
+    "claude": false,
+    "continue": false
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "name": "@skillsforllms/reactskills",
+  "version": "1.0.0",
+  "description": "Production-ready React.js skills for LLM agents — covers components, hooks, state, routing, forms, testing, and performance patterns.",
+  "keywords": [
+    "llm",
+    "ai-agent",
+    "skill",
+    "react",
+    "reactjs",
+    "hooks",
+    "components",
+    "skillsforllms",
+    "ai-skills",
+    "cursor",
+    "copilot"
+  ],
+  "homepage": "https://github.com/anlabsdev/skillsforllms-Reactjs#readme",
+  "bugs": {
+    "url": "https://github.com/anlabsdev/skillsforllms-Reactjs/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anlabsdev/skillsforllms-Reactjs.git"
+  },
+  "license": "Apache-2.0",
+  "author": "ANlabs",
+  "publishConfig": {
+    "access": "public"
+  },
+  "type": "commonjs",
+  "main": "index.js",
+  "files": [
+    "index.js",
+    "skills/",
+    "examples/",
+    "README.md"
+  ],
+  "scripts": {
+    "test": "node test.js"
+  },
+  "skillsforllms": {
+    "category": "web",
+    "tags": [
+      "react",
+      "hooks",
+      "components",
+      "state",
+      "routing",
+      "forms",
+      "testing",
+      "performance"
+    ],
+    "compatibleAgents": [
+      "claude",
+      "cursor",
+      "copilot",
+      "continue",
+      "windsurf"
+    ]
+  }
+}

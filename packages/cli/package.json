@@ -1,0 +1,42 @@
+{
+  "name": "skillsforllms",
+  "version": "0.1.0",
+  "description": "CLI for syncing installable AI skill packages into projects.",
+  "type": "module",
+  "license": "MIT",
+  "author": "ANlabs",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anlabsdev/automata-ai-skillsforllms.git",
+    "directory": "packages/cli"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "bin": {
+    "skillsforllms": "./dist/index.js"
+  },
+  "exports": {
+    ".": "./dist/index.js",
+    "./auto-sync": "./dist/auto-sync.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "check": "tsc -p tsconfig.json --noEmit",
+    "dev": "node --watch dist/index.js",
+    "lint": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@skillsforllms/core": "workspace:*",
+    "commander": "^12.1.0",
+    "fs-extra": "^11.2.0",
+    "picocolors": "^1.1.1"
+  },
+  "devDependencies": {
+    "vitest": "^2.1.8"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "name": "@skillsforllms/node-rest-api",
+  "version": "1.0.0",
+  "description": "AI skill: Node.js REST API conventions with TypeScript, validation, auth, and tests.",
+  "keywords": ["llm", "ai-agent", "skill", "node", "express", "api", "skillsforllms"],
+  "license": "MIT",
+  "author": "Automata AI",
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": ["SKILL.md", "examples/", "README.md"],
+  "skillsforllms": {
+    "category": "backend",
+    "tags": ["node", "express", "typescript", "rest", "zod"],
+    "compatibleAgents": ["claude", "cursor", "copilot", "continue"]
+  },
+  "scripts": {
+    "build": "node -e \"console.log('skill package: no build needed')\"",
+    "check": "node -e \"console.log('skill package: no typecheck needed')\"",
+    "lint": "node -e \"console.log('skill package: no lint needed')\"",
+    "test": "node -e \"console.log('skill package: no tests needed')\""
+  }
+}

@@ -1,0 +1,9 @@
+node_modules
+dist
+dist-types
+.turbo
+.vite
+coverage
+.skills
+pnpm-lock.yaml
+*.zip
