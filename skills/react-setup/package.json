@@ -5,6 +5,11 @@
   "keywords": ["llm", "ai-agent", "skill", "react", "vite", "typescript", "skillsforllms"],
   "license": "MIT",
   "author": "Automata AI",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anlabsdev/automata-ai-skillsforllms.git",
+    "directory": "skills/react-setup"
+  },
   "publishConfig": {
     "access": "public"
   },
