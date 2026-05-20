@@ -195,9 +195,8 @@ function App() {
                 key={skill.package}
                 skill={skill}
                 onOpen={() => setSelectedSkill(skill)}
-                onCopy={(event) => {
-                  event.stopPropagation();
-                  copy(installCommand(skill));
+                onCopy={(value) => {
+                  copy(value);
                 }}
               />
             ))}
@@ -459,7 +458,7 @@ function SkillCard({
 }: {
   skill: Skill;
   onOpen: () => void;
-  onCopy: (event: React.MouseEvent<HTMLButtonElement>) => void;
+  onCopy: (value: string) => void;
 }) {
   return (
     <article
@@ -485,7 +484,7 @@ function SkillCard({
             style={{ cursor: "copy" }}
             onClick={(event) => {
               event.stopPropagation();
-              copy(skill.package);
+              onCopy(skill.package);
             }}
           >
             {skill.package}
@@ -512,7 +511,16 @@ function SkillCard({
           >
             GitHub
           </a>
-          <button className="skill-btn skill-btn-install" type="button" onClick={onCopy}>Install</button>
+          <button
+            className="skill-btn skill-btn-install"
+            type="button"
+            onClick={(event) => {
+              event.stopPropagation();
+              onCopy(installCommand(skill));
+            }}
+          >
+            Install
+          </button>
         </div>
       </div>
     </article>
