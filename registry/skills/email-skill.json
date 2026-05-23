@@ -1,0 +1,29 @@
+{
+  "name": "Email Skill",
+  "package": "@skillsforllms/email-skill",
+  "version": "1.0.0",
+  "category": "communications",
+  "description": "AI skill: Transactional email with Resend or Nodemailer.",
+  "tags": [
+    "email",
+    "resend",
+    "nodemailer",
+    "templates"
+  ],
+  "author": "Automata AI",
+  "compatibleAgents": [
+    "claude",
+    "cursor",
+    "copilot",
+    "continue"
+  ],
+  "shortName": "email-skill",
+  "tier": "pro",
+  "status": "pro-planned",
+  "launchPhase": "Mature Pro - Month 5",
+  "coreFeature": "Transactional email with Resend or Nodemailer.",
+  "whyItSells": "Every app sends email.",
+  "private": true,
+  "weeklyDownloads": null,
+  "source": "skills/email-skill"
+}

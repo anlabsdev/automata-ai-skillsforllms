@@ -80,7 +80,7 @@ export function validateSkillMarkdown(markdown: string): SkillValidationResult {
   const headings = extractHeadings(markdown);
   const normalized = new Set(headings.map(normalizeHeading));
   const titlePresent = /^#\s+Skill:\s+.+$/m.test(markdown);
-  const metadataPresent = /^>\s+.+\s+·\s+v?\d+\.\d+\.\d+.*\s+·\s+Category:\s+.+$/m.test(markdown);
+  const metadataPresent = /^>\s+.+\s+(?:·|-)\s+v?\d+\.\d+\.\d+.*\s+(?:·|-)\s+Category:\s+.+$/m.test(markdown);
 
   const requiredLines = REQUIRED_SECTIONS.map((name) => ({
     name,

@@ -1,0 +1,29 @@
+{
+  "name": "Readme Generator Skill",
+  "package": "@skillsforllms/readme-generator-skill",
+  "version": "1.0.0",
+  "category": "docs",
+  "description": "AI skill: Auto-write a clean README from project files.",
+  "tags": [
+    "readme",
+    "documentation",
+    "onboarding",
+    "developer-experience"
+  ],
+  "author": "Automata AI",
+  "compatibleAgents": [
+    "claude",
+    "cursor",
+    "copilot",
+    "continue"
+  ],
+  "shortName": "readme-generator-skill",
+  "tier": "free",
+  "status": "available",
+  "launchPhase": "Tier 2 - Month 2",
+  "coreFeature": "Auto-write a clean README from project files.",
+  "whyItSells": null,
+  "private": false,
+  "weeklyDownloads": null,
+  "source": "skills/readme-generator-skill"
+}

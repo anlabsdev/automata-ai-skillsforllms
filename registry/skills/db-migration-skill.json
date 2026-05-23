@@ -1,0 +1,29 @@
+{
+  "name": "Db Migration Skill",
+  "package": "@skillsforllms/db-migration-skill",
+  "version": "1.0.0",
+  "category": "backend",
+  "description": "AI skill: Safe migration scripts for Postgres and MySQL.",
+  "tags": [
+    "postgres",
+    "mysql",
+    "migrations",
+    "database"
+  ],
+  "author": "Automata AI",
+  "compatibleAgents": [
+    "claude",
+    "cursor",
+    "copilot",
+    "continue"
+  ],
+  "shortName": "db-migration-skill",
+  "tier": "pro",
+  "status": "pro-planned",
+  "launchPhase": "Growth Pro - Month 2",
+  "coreFeature": "Safe migration scripts for Postgres and MySQL.",
+  "whyItSells": "Migrations break things, and teams pay to avoid data loss.",
+  "private": true,
+  "weeklyDownloads": null,
+  "source": "skills/db-migration-skill"
+}

@@ -1,0 +1,54 @@
+{
+  "name": "@skillsforllms/file-upload-skill",
+  "version": "1.0.0",
+  "description": "AI skill: Image and file upload with storage and CDN config.",
+  "keywords": [
+    "llm",
+    "ai-agent",
+    "skill",
+    "skillsforllms",
+    "s3",
+    "r2",
+    "uploads",
+    "cdn"
+  ],
+  "license": "SEE LICENSE IN LICENSE.md",
+  "author": "Automata AI",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anlabsdev/automata-ai-skillsforllms.git",
+    "directory": "skills/file-upload-skill"
+  },
+  "files": [
+    "SKILL.md",
+    "README.md",
+    "examples/"
+  ],
+  "skillsforllms": {
+    "category": "storage",
+    "tier": "pro",
+    "launchPhase": "Mature Pro - Month 6",
+    "coreFeature": "Image and file upload with storage and CDN config.",
+    "whyItSells": "S3 and R2 setup is painful.",
+    "status": "pro-planned",
+    "tags": [
+      "s3",
+      "r2",
+      "uploads",
+      "cdn"
+    ],
+    "compatibleAgents": [
+      "claude",
+      "cursor",
+      "copilot",
+      "continue"
+    ]
+  },
+  "scripts": {
+    "build": "node -e \"console.log('skill package: no build needed')\"",
+    "check": "node -e \"console.log('skill package: no typecheck needed')\"",
+    "lint": "node -e \"console.log('skill package: no lint needed')\"",
+    "test": "node -e \"console.log('skill package: no tests needed')\""
+  }
+}

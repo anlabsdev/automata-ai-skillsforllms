@@ -1,0 +1,29 @@
+{
+  "name": "Fullstack Scaffold Skill",
+  "package": "@skillsforllms/fullstack-scaffold-skill",
+  "version": "1.0.0",
+  "category": "fullstack",
+  "description": "AI skill: Database, API, and UI wired together.",
+  "tags": [
+    "fullstack",
+    "database",
+    "api",
+    "ui"
+  ],
+  "author": "Automata AI",
+  "compatibleAgents": [
+    "claude",
+    "cursor",
+    "copilot",
+    "continue"
+  ],
+  "shortName": "fullstack-scaffold-skill",
+  "tier": "pro",
+  "status": "pro-planned",
+  "launchPhase": "Launch Pro - Month 1",
+  "coreFeature": "Database, API, and UI wired together.",
+  "whyItSells": "Saves hours on every new project.",
+  "private": true,
+  "weeklyDownloads": null,
+  "source": "skills/fullstack-scaffold-skill"
+}

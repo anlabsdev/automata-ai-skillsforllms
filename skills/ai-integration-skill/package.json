@@ -1,0 +1,54 @@
+{
+  "name": "@skillsforllms/ai-integration-skill",
+  "version": "1.0.0",
+  "description": "AI skill: Add Claude, OpenAI, RAG, and agent flows to existing apps.",
+  "keywords": [
+    "llm",
+    "ai-agent",
+    "skill",
+    "skillsforllms",
+    "openai",
+    "claude",
+    "rag",
+    "agents"
+  ],
+  "license": "SEE LICENSE IN LICENSE.md",
+  "author": "Automata AI",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anlabsdev/automata-ai-skillsforllms.git",
+    "directory": "skills/ai-integration-skill"
+  },
+  "files": [
+    "SKILL.md",
+    "README.md",
+    "examples/"
+  ],
+  "skillsforllms": {
+    "category": "ai",
+    "tier": "pro",
+    "launchPhase": "Growth Pro - Month 3",
+    "coreFeature": "Add Claude, OpenAI, RAG, and agent flows to existing apps.",
+    "whyItSells": "AI integration is a high-demand feature.",
+    "status": "pro-planned",
+    "tags": [
+      "openai",
+      "claude",
+      "rag",
+      "agents"
+    ],
+    "compatibleAgents": [
+      "claude",
+      "cursor",
+      "copilot",
+      "continue"
+    ]
+  },
+  "scripts": {
+    "build": "node -e \"console.log('skill package: no build needed')\"",
+    "check": "node -e \"console.log('skill package: no typecheck needed')\"",
+    "lint": "node -e \"console.log('skill package: no lint needed')\"",
+    "test": "node -e \"console.log('skill package: no tests needed')\""
+  }
+}

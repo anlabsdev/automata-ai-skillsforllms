@@ -1,0 +1,29 @@
+{
+  "name": "Seo Skill",
+  "package": "@skillsforllms/seo-skill",
+  "version": "1.0.0",
+  "category": "marketing",
+  "description": "AI skill: Meta tags, sitemap, open graph images, and structured data.",
+  "tags": [
+    "seo",
+    "metadata",
+    "sitemap",
+    "structured-data"
+  ],
+  "author": "Automata AI",
+  "compatibleAgents": [
+    "claude",
+    "cursor",
+    "copilot",
+    "continue"
+  ],
+  "shortName": "seo-skill",
+  "tier": "pro",
+  "status": "pro-planned",
+  "launchPhase": "Mature Pro - Month 5",
+  "coreFeature": "Meta tags, sitemap, open graph images, and structured data.",
+  "whyItSells": "Freelancers and client-site builders need this constantly.",
+  "private": true,
+  "weeklyDownloads": null,
+  "source": "skills/seo-skill"
+}

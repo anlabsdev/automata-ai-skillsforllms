@@ -1,0 +1,29 @@
+{
+  "name": "Dashboard Skill",
+  "package": "@skillsforllms/dashboard-skill",
+  "version": "1.0.0",
+  "category": "web",
+  "description": "AI skill: Admin panels, charts, filters, and data tables.",
+  "tags": [
+    "dashboard",
+    "charts",
+    "tables",
+    "admin"
+  ],
+  "author": "Automata AI",
+  "compatibleAgents": [
+    "claude",
+    "cursor",
+    "copilot",
+    "continue"
+  ],
+  "shortName": "dashboard-skill",
+  "tier": "pro",
+  "status": "pro-planned",
+  "launchPhase": "Launch Pro - Month 1",
+  "coreFeature": "Admin panels, charts, filters, and data tables.",
+  "whyItSells": "Visually impressive and strong for demos.",
+  "private": true,
+  "weeklyDownloads": null,
+  "source": "skills/dashboard-skill"
+}

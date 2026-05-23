@@ -1,0 +1,29 @@
+{
+  "name": "Env Setup Skill",
+  "package": "@skillsforllms/env-setup-skill",
+  "version": "1.0.0",
+  "category": "devops",
+  "description": "AI skill: .env templates plus inline documentation auto-generated.",
+  "tags": [
+    "env",
+    "configuration",
+    "secrets",
+    "documentation"
+  ],
+  "author": "Automata AI",
+  "compatibleAgents": [
+    "claude",
+    "cursor",
+    "copilot",
+    "continue"
+  ],
+  "shortName": "env-setup-skill",
+  "tier": "free",
+  "status": "available",
+  "launchPhase": "Tier 1 - Month 1",
+  "coreFeature": ".env templates plus inline documentation auto-generated.",
+  "whyItSells": null,
+  "private": false,
+  "weeklyDownloads": null,
+  "source": "skills/env-setup-skill"
+}

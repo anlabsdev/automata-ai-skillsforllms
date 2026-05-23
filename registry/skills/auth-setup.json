@@ -18,6 +18,12 @@
     "continue"
   ],
   "shortName": "auth-setup",
+  "tier": "free",
+  "status": "available",
+  "launchPhase": null,
+  "coreFeature": null,
+  "whyItSells": null,
+  "private": false,
   "weeklyDownloads": null,
   "source": "skills/auth-setup"
 }

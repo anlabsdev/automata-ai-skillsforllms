@@ -1,0 +1,55 @@
+{
+  "name": "@skillsforllms/readme-generator-skill",
+  "version": "1.0.0",
+  "description": "AI skill: Auto-write a clean README from project files.",
+  "keywords": [
+    "llm",
+    "ai-agent",
+    "skill",
+    "skillsforllms",
+    "readme",
+    "documentation",
+    "onboarding",
+    "developer-experience"
+  ],
+  "license": "MIT",
+  "author": "Automata AI",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anlabsdev/automata-ai-skillsforllms.git",
+    "directory": "skills/readme-generator-skill"
+  },
+  "files": [
+    "SKILL.md",
+    "README.md",
+    "examples/"
+  ],
+  "skillsforllms": {
+    "category": "docs",
+    "tier": "free",
+    "launchPhase": "Tier 2 - Month 2",
+    "coreFeature": "Auto-write a clean README from project files.",
+    "status": "available",
+    "tags": [
+      "readme",
+      "documentation",
+      "onboarding",
+      "developer-experience"
+    ],
+    "compatibleAgents": [
+      "claude",
+      "cursor",
+      "copilot",
+      "continue"
+    ]
+  },
+  "scripts": {
+    "build": "node -e \"console.log('skill package: no build needed')\"",
+    "check": "node -e \"console.log('skill package: no typecheck needed')\"",
+    "lint": "node -e \"console.log('skill package: no lint needed')\"",
+    "test": "node -e \"console.log('skill package: no tests needed')\""
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "name": "React Component Skill",
+  "package": "@skillsforllms/react-component-skill",
+  "version": "1.0.0",
+  "category": "web",
+  "description": "AI skill: Generate React components from a plain-language description.",
+  "tags": [
+    "react",
+    "components",
+    "typescript",
+    "ui"
+  ],
+  "author": "Automata AI",
+  "compatibleAgents": [
+    "claude",
+    "cursor",
+    "copilot",
+    "continue"
+  ],
+  "shortName": "react-component-skill",
+  "tier": "free",
+  "status": "available",
+  "launchPhase": "Tier 1 - Month 1",
+  "coreFeature": "Generate React components from a plain-language description.",
+  "whyItSells": null,
+  "private": false,
+  "weeklyDownloads": null,
+  "source": "skills/react-component-skill"
+}

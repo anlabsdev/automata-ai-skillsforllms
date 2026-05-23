@@ -1,0 +1,29 @@
+{
+  "name": "Stripe Payment Skill",
+  "package": "@skillsforllms/stripe-payment-skill",
+  "version": "1.0.0",
+  "category": "payments",
+  "description": "AI skill: Checkout, webhooks, subscriptions, and billing state.",
+  "tags": [
+    "stripe",
+    "checkout",
+    "webhooks",
+    "subscriptions"
+  ],
+  "author": "Automata AI",
+  "compatibleAgents": [
+    "claude",
+    "cursor",
+    "copilot",
+    "continue"
+  ],
+  "shortName": "stripe-payment-skill",
+  "tier": "pro",
+  "status": "pro-planned",
+  "launchPhase": "Mature Pro - Month 4",
+  "coreFeature": "Checkout, webhooks, subscriptions, and billing state.",
+  "whyItSells": "Money flows are high priority and painful to debug.",
+  "private": true,
+  "weeklyDownloads": null,
+  "source": "skills/stripe-payment-skill"
+}

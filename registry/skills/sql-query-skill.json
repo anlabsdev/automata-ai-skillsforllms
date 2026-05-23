@@ -1,0 +1,29 @@
+{
+  "name": "Sql Query Skill",
+  "package": "@skillsforllms/sql-query-skill",
+  "version": "1.0.0",
+  "category": "backend",
+  "description": "AI skill: Write SQL from natural language.",
+  "tags": [
+    "sql",
+    "postgres",
+    "mysql",
+    "queries"
+  ],
+  "author": "Automata AI",
+  "compatibleAgents": [
+    "claude",
+    "cursor",
+    "copilot",
+    "continue"
+  ],
+  "shortName": "sql-query-skill",
+  "tier": "free",
+  "status": "available",
+  "launchPhase": "Tier 2 - Month 2",
+  "coreFeature": "Write SQL from natural language.",
+  "whyItSells": null,
+  "private": false,
+  "weeklyDownloads": null,
+  "source": "skills/sql-query-skill"
+}

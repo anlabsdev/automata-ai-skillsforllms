@@ -18,6 +18,12 @@
     "continue"
   ],
   "shortName": "nextjs-setup",
+  "tier": "free",
+  "status": "available",
+  "launchPhase": null,
+  "coreFeature": null,
+  "whyItSells": null,
+  "private": false,
   "weeklyDownloads": null,
   "source": "skills/nextjs-setup"
 }

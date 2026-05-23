@@ -1,0 +1,29 @@
+{
+  "name": "Eslint Prettier Skill",
+  "package": "@skillsforllms/eslint-prettier-skill",
+  "version": "1.0.0",
+  "category": "devops",
+  "description": "AI skill: Auto-configure linting and formatting.",
+  "tags": [
+    "eslint",
+    "prettier",
+    "formatting",
+    "linting"
+  ],
+  "author": "Automata AI",
+  "compatibleAgents": [
+    "claude",
+    "cursor",
+    "copilot",
+    "continue"
+  ],
+  "shortName": "eslint-prettier-skill",
+  "tier": "free",
+  "status": "available",
+  "launchPhase": "Tier 2 - Month 2",
+  "coreFeature": "Auto-configure linting and formatting.",
+  "whyItSells": null,
+  "private": false,
+  "weeklyDownloads": null,
+  "source": "skills/eslint-prettier-skill"
+}

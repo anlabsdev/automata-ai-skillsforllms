@@ -15,8 +15,21 @@ const skillFolders = (await fs.readdir(skillsDir, { withFileTypes: true }))
   .map((entry) => entry.name)
   .sort();
 
-for (const folder of skillFolders) {
-  const packagePath = path.join(skillsDir, folder, "package.json");
+const packageRoots = [
+  ...skillFolders.map((folder) => ({
+    folder,
+    packagePath: path.join(skillsDir, folder, "package.json"),
+    source: `skills/${folder}`
+  })),
+  {
+    folder: "reactskills",
+    packagePath: path.join(root, "reactskills", "package.json"),
+    source: "reactskills"
+  }
+];
+
+for (const packageRoot of packageRoots) {
+  const packagePath = packageRoot.packagePath;
   const packageJson = JSON.parse(await fs.readFile(packagePath, "utf8"));
   const metadata = packageJson.skillsforllms ?? {};
 
@@ -40,8 +53,14 @@ for (const folder of skillFolders) {
   const record = {
     ...required,
     shortName: shortName(packageJson.name),
+    tier: metadata.tier ?? (packageJson.private ? "pro" : "free"),
+    status: metadata.status ?? (packageJson.private ? "pro-planned" : "available"),
+    launchPhase: metadata.launchPhase ?? null,
+    coreFeature: metadata.coreFeature ?? null,
+    whyItSells: metadata.whyItSells ?? null,
+    private: packageJson.private === true,
     weeklyDownloads: null,
-    source: `skills/${folder}`
+    source: packageRoot.source
   };
 
   entries.push(record);

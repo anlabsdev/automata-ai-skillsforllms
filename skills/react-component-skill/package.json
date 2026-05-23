@@ -1,0 +1,55 @@
+{
+  "name": "@skillsforllms/react-component-skill",
+  "version": "1.0.0",
+  "description": "AI skill: Generate React components from a plain-language description.",
+  "keywords": [
+    "llm",
+    "ai-agent",
+    "skill",
+    "skillsforllms",
+    "react",
+    "components",
+    "typescript",
+    "ui"
+  ],
+  "license": "MIT",
+  "author": "Automata AI",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anlabsdev/automata-ai-skillsforllms.git",
+    "directory": "skills/react-component-skill"
+  },
+  "files": [
+    "SKILL.md",
+    "README.md",
+    "examples/"
+  ],
+  "skillsforllms": {
+    "category": "web",
+    "tier": "free",
+    "launchPhase": "Tier 1 - Month 1",
+    "coreFeature": "Generate React components from a plain-language description.",
+    "status": "available",
+    "tags": [
+      "react",
+      "components",
+      "typescript",
+      "ui"
+    ],
+    "compatibleAgents": [
+      "claude",
+      "cursor",
+      "copilot",
+      "continue"
+    ]
+  },
+  "scripts": {
+    "build": "node -e \"console.log('skill package: no build needed')\"",
+    "check": "node -e \"console.log('skill package: no typecheck needed')\"",
+    "lint": "node -e \"console.log('skill package: no lint needed')\"",
+    "test": "node -e \"console.log('skill package: no tests needed')\""
+  }
+}

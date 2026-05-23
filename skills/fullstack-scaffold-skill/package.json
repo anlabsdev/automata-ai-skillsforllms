@@ -1,0 +1,54 @@
+{
+  "name": "@skillsforllms/fullstack-scaffold-skill",
+  "version": "1.0.0",
+  "description": "AI skill: Database, API, and UI wired together.",
+  "keywords": [
+    "llm",
+    "ai-agent",
+    "skill",
+    "skillsforllms",
+    "fullstack",
+    "database",
+    "api",
+    "ui"
+  ],
+  "license": "SEE LICENSE IN LICENSE.md",
+  "author": "Automata AI",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anlabsdev/automata-ai-skillsforllms.git",
+    "directory": "skills/fullstack-scaffold-skill"
+  },
+  "files": [
+    "SKILL.md",
+    "README.md",
+    "examples/"
+  ],
+  "skillsforllms": {
+    "category": "fullstack",
+    "tier": "pro",
+    "launchPhase": "Launch Pro - Month 1",
+    "coreFeature": "Database, API, and UI wired together.",
+    "whyItSells": "Saves hours on every new project.",
+    "status": "pro-planned",
+    "tags": [
+      "fullstack",
+      "database",
+      "api",
+      "ui"
+    ],
+    "compatibleAgents": [
+      "claude",
+      "cursor",
+      "copilot",
+      "continue"
+    ]
+  },
+  "scripts": {
+    "build": "node -e \"console.log('skill package: no build needed')\"",
+    "check": "node -e \"console.log('skill package: no typecheck needed')\"",
+    "lint": "node -e \"console.log('skill package: no lint needed')\"",
+    "test": "node -e \"console.log('skill package: no tests needed')\""
+  }
+}

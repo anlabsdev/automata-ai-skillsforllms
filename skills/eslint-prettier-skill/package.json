@@ -1,0 +1,55 @@
+{
+  "name": "@skillsforllms/eslint-prettier-skill",
+  "version": "1.0.0",
+  "description": "AI skill: Auto-configure linting and formatting.",
+  "keywords": [
+    "llm",
+    "ai-agent",
+    "skill",
+    "skillsforllms",
+    "eslint",
+    "prettier",
+    "formatting",
+    "linting"
+  ],
+  "license": "MIT",
+  "author": "Automata AI",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anlabsdev/automata-ai-skillsforllms.git",
+    "directory": "skills/eslint-prettier-skill"
+  },
+  "files": [
+    "SKILL.md",
+    "README.md",
+    "examples/"
+  ],
+  "skillsforllms": {
+    "category": "devops",
+    "tier": "free",
+    "launchPhase": "Tier 2 - Month 2",
+    "coreFeature": "Auto-configure linting and formatting.",
+    "status": "available",
+    "tags": [
+      "eslint",
+      "prettier",
+      "formatting",
+      "linting"
+    ],
+    "compatibleAgents": [
+      "claude",
+      "cursor",
+      "copilot",
+      "continue"
+    ]
+  },
+  "scripts": {
+    "build": "node -e \"console.log('skill package: no build needed')\"",
+    "check": "node -e \"console.log('skill package: no typecheck needed')\"",
+    "lint": "node -e \"console.log('skill package: no lint needed')\"",
+    "test": "node -e \"console.log('skill package: no tests needed')\""
+  }
+}

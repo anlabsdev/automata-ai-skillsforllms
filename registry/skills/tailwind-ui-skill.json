@@ -1,0 +1,29 @@
+{
+  "name": "Tailwind Ui Skill",
+  "package": "@skillsforllms/tailwind-ui-skill",
+  "version": "1.0.0",
+  "category": "web",
+  "description": "AI skill: Create ready-to-paste navbars, cards, modals, buttons, forms, and layout sections.",
+  "tags": [
+    "tailwind",
+    "ui",
+    "components",
+    "design-system"
+  ],
+  "author": "Automata AI",
+  "compatibleAgents": [
+    "claude",
+    "cursor",
+    "copilot",
+    "continue"
+  ],
+  "shortName": "tailwind-ui-skill",
+  "tier": "free",
+  "status": "available",
+  "launchPhase": "Tier 1 - Month 1",
+  "coreFeature": "Create ready-to-paste navbars, cards, modals, buttons, forms, and layout sections.",
+  "whyItSells": null,
+  "private": false,
+  "weeklyDownloads": null,
+  "source": "skills/tailwind-ui-skill"
+}

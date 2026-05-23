@@ -107,15 +107,55 @@ importers:
         specifier: ^1.1.1
         version: 1.1.1
 
+  skills/ai-integration-skill: {}
+
+  skills/api-builder-skill: {}
+
   skills/auth-setup: {}
 
+  skills/auth-system-skill: {}
+
+  skills/dashboard-skill: {}
+
+  skills/db-migration-skill: {}
+
+  skills/deploy-skill: {}
+
+  skills/email-skill: {}
+
+  skills/env-setup-skill: {}
+
+  skills/eslint-prettier-skill: {}
+
+  skills/file-upload-skill: {}
+
   skills/firebase-setup: {}
+
+  skills/fullstack-scaffold-skill: {}
 
   skills/nextjs-setup: {}
 
   skills/node-rest-api: {}
 
+  skills/prisma-schema-skill: {}
+
+  skills/project-setup-skill: {}
+
+  skills/react-component-skill: {}
+
   skills/react-setup: {}
+
+  skills/readme-generator-skill: {}
+
+  skills/seo-skill: {}
+
+  skills/sql-query-skill: {}
+
+  skills/stripe-payment-skill: {}
+
+  skills/tailwind-ui-skill: {}
+
+  skills/testing-skill: {}
 
   website:
     dependencies:

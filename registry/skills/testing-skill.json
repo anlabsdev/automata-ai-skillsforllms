@@ -1,0 +1,29 @@
+{
+  "name": "Testing Skill",
+  "package": "@skillsforllms/testing-skill",
+  "version": "1.0.0",
+  "category": "quality",
+  "description": "AI skill: Generate Jest, Vitest, and Playwright tests.",
+  "tags": [
+    "jest",
+    "vitest",
+    "playwright",
+    "testing"
+  ],
+  "author": "Automata AI",
+  "compatibleAgents": [
+    "claude",
+    "cursor",
+    "copilot",
+    "continue"
+  ],
+  "shortName": "testing-skill",
+  "tier": "pro",
+  "status": "pro-planned",
+  "launchPhase": "Growth Pro - Month 2",
+  "coreFeature": "Generate Jest, Vitest, and Playwright tests.",
+  "whyItSells": "Developers know they should test but often skip it.",
+  "private": true,
+  "weeklyDownloads": null,
+  "source": "skills/testing-skill"
+}

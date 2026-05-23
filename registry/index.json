@@ -1,6 +1,64 @@
 {
-  "generatedAt": "2026-05-19T11:14:24.255Z",
+  "generatedAt": "2026-05-23T17:09:18.221Z",
   "skills": [
+    {
+      "name": "Ai Integration Skill",
+      "package": "@skillsforllms/ai-integration-skill",
+      "version": "1.0.0",
+      "category": "ai",
+      "description": "AI skill: Add Claude, OpenAI, RAG, and agent flows to existing apps.",
+      "tags": [
+        "openai",
+        "claude",
+        "rag",
+        "agents"
+      ],
+      "author": "Automata AI",
+      "compatibleAgents": [
+        "claude",
+        "cursor",
+        "copilot",
+        "continue"
+      ],
+      "shortName": "ai-integration-skill",
+      "tier": "pro",
+      "status": "pro-planned",
+      "launchPhase": "Growth Pro - Month 3",
+      "coreFeature": "Add Claude, OpenAI, RAG, and agent flows to existing apps.",
+      "whyItSells": "AI integration is a high-demand feature.",
+      "private": true,
+      "weeklyDownloads": null,
+      "source": "skills/ai-integration-skill"
+    },
+    {
+      "name": "Api Builder Skill",
+      "package": "@skillsforllms/api-builder-skill",
+      "version": "1.0.0",
+      "category": "backend",
+      "description": "AI skill: REST and tRPC endpoint generation.",
+      "tags": [
+        "rest",
+        "trpc",
+        "openapi",
+        "validation"
+      ],
+      "author": "Automata AI",
+      "compatibleAgents": [
+        "claude",
+        "cursor",
+        "copilot",
+        "continue"
+      ],
+      "shortName": "api-builder-skill",
+      "tier": "pro",
+      "status": "pro-planned",
+      "launchPhase": "Launch Pro - Month 1",
+      "coreFeature": "REST and tRPC endpoint generation.",
+      "whyItSells": "Every project needs APIs.",
+      "private": true,
+      "weeklyDownloads": null,
+      "source": "skills/api-builder-skill"
+    },
     {
       "name": "Auth Setup",
       "package": "@skillsforllms/auth-setup",
@@ -21,8 +79,246 @@
         "continue"
       ],
       "shortName": "auth-setup",
+      "tier": "free",
+      "status": "available",
+      "launchPhase": null,
+      "coreFeature": null,
+      "whyItSells": null,
+      "private": false,
       "weeklyDownloads": null,
       "source": "skills/auth-setup"
+    },
+    {
+      "name": "Auth System Skill",
+      "package": "@skillsforllms/auth-system-skill",
+      "version": "1.0.0",
+      "category": "security",
+      "description": "AI skill: JWT, OAuth, sessions, and role-based access.",
+      "tags": [
+        "auth",
+        "oauth",
+        "jwt",
+        "rbac"
+      ],
+      "author": "Automata AI",
+      "compatibleAgents": [
+        "claude",
+        "cursor",
+        "copilot",
+        "continue"
+      ],
+      "shortName": "auth-system-skill",
+      "tier": "pro",
+      "status": "pro-planned",
+      "launchPhase": "Launch Pro - Month 1",
+      "coreFeature": "JWT, OAuth, sessions, and role-based access.",
+      "whyItSells": "Every app needs auth, and most teams dislike rebuilding it.",
+      "private": true,
+      "weeklyDownloads": null,
+      "source": "skills/auth-system-skill"
+    },
+    {
+      "name": "Dashboard Skill",
+      "package": "@skillsforllms/dashboard-skill",
+      "version": "1.0.0",
+      "category": "web",
+      "description": "AI skill: Admin panels, charts, filters, and data tables.",
+      "tags": [
+        "dashboard",
+        "charts",
+        "tables",
+        "admin"
+      ],
+      "author": "Automata AI",
+      "compatibleAgents": [
+        "claude",
+        "cursor",
+        "copilot",
+        "continue"
+      ],
+      "shortName": "dashboard-skill",
+      "tier": "pro",
+      "status": "pro-planned",
+      "launchPhase": "Launch Pro - Month 1",
+      "coreFeature": "Admin panels, charts, filters, and data tables.",
+      "whyItSells": "Visually impressive and strong for demos.",
+      "private": true,
+      "weeklyDownloads": null,
+      "source": "skills/dashboard-skill"
+    },
+    {
+      "name": "Db Migration Skill",
+      "package": "@skillsforllms/db-migration-skill",
+      "version": "1.0.0",
+      "category": "backend",
+      "description": "AI skill: Safe migration scripts for Postgres and MySQL.",
+      "tags": [
+        "postgres",
+        "mysql",
+        "migrations",
+        "database"
+      ],
+      "author": "Automata AI",
+      "compatibleAgents": [
+        "claude",
+        "cursor",
+        "copilot",
+        "continue"
+      ],
+      "shortName": "db-migration-skill",
+      "tier": "pro",
+      "status": "pro-planned",
+      "launchPhase": "Growth Pro - Month 2",
+      "coreFeature": "Safe migration scripts for Postgres and MySQL.",
+      "whyItSells": "Migrations break things, and teams pay to avoid data loss.",
+      "private": true,
+      "weeklyDownloads": null,
+      "source": "skills/db-migration-skill"
+    },
+    {
+      "name": "Deploy Skill",
+      "package": "@skillsforllms/deploy-skill",
+      "version": "1.0.0",
+      "category": "devops",
+      "description": "AI skill: Dockerfile, GitHub Actions, Vercel, and Railway config.",
+      "tags": [
+        "docker",
+        "github-actions",
+        "vercel",
+        "railway"
+      ],
+      "author": "Automata AI",
+      "compatibleAgents": [
+        "claude",
+        "cursor",
+        "copilot",
+        "continue"
+      ],
+      "shortName": "deploy-skill",
+      "tier": "pro",
+      "status": "pro-planned",
+      "launchPhase": "Growth Pro - Month 3",
+      "coreFeature": "Dockerfile, GitHub Actions, Vercel, and Railway config.",
+      "whyItSells": "Deployment is scary for juniors and costly for teams.",
+      "private": true,
+      "weeklyDownloads": null,
+      "source": "skills/deploy-skill"
+    },
+    {
+      "name": "Email Skill",
+      "package": "@skillsforllms/email-skill",
+      "version": "1.0.0",
+      "category": "communications",
+      "description": "AI skill: Transactional email with Resend or Nodemailer.",
+      "tags": [
+        "email",
+        "resend",
+        "nodemailer",
+        "templates"
+      ],
+      "author": "Automata AI",
+      "compatibleAgents": [
+        "claude",
+        "cursor",
+        "copilot",
+        "continue"
+      ],
+      "shortName": "email-skill",
+      "tier": "pro",
+      "status": "pro-planned",
+      "launchPhase": "Mature Pro - Month 5",
+      "coreFeature": "Transactional email with Resend or Nodemailer.",
+      "whyItSells": "Every app sends email.",
+      "private": true,
+      "weeklyDownloads": null,
+      "source": "skills/email-skill"
+    },
+    {
+      "name": "Env Setup Skill",
+      "package": "@skillsforllms/env-setup-skill",
+      "version": "1.0.0",
+      "category": "devops",
+      "description": "AI skill: .env templates plus inline documentation auto-generated.",
+      "tags": [
+        "env",
+        "configuration",
+        "secrets",
+        "documentation"
+      ],
+      "author": "Automata AI",
+      "compatibleAgents": [
+        "claude",
+        "cursor",
+        "copilot",
+        "continue"
+      ],
+      "shortName": "env-setup-skill",
+      "tier": "free",
+      "status": "available",
+      "launchPhase": "Tier 1 - Month 1",
+      "coreFeature": ".env templates plus inline documentation auto-generated.",
+      "whyItSells": null,
+      "private": false,
+      "weeklyDownloads": null,
+      "source": "skills/env-setup-skill"
+    },
+    {
+      "name": "Eslint Prettier Skill",
+      "package": "@skillsforllms/eslint-prettier-skill",
+      "version": "1.0.0",
+      "category": "devops",
+      "description": "AI skill: Auto-configure linting and formatting.",
+      "tags": [
+        "eslint",
+        "prettier",
+        "formatting",
+        "linting"
+      ],
+      "author": "Automata AI",
+      "compatibleAgents": [
+        "claude",
+        "cursor",
+        "copilot",
+        "continue"
+      ],
+      "shortName": "eslint-prettier-skill",
+      "tier": "free",
+      "status": "available",
+      "launchPhase": "Tier 2 - Month 2",
+      "coreFeature": "Auto-configure linting and formatting.",
+      "whyItSells": null,
+      "private": false,
+      "weeklyDownloads": null,
+      "source": "skills/eslint-prettier-skill"
+    },
+    {
+      "name": "File Upload Skill",
+      "package": "@skillsforllms/file-upload-skill",
+      "version": "1.0.0",
+      "category": "storage",
+      "description": "AI skill: Image and file upload with storage and CDN config.",
+      "tags": [
+        "s3",
+        "r2",
+        "uploads",
+        "cdn"
+      ],
+      "author": "Automata AI",
+      "compatibleAgents": [
+        "claude",
+        "cursor",
+        "copilot",
+        "continue"
+      ],
+      "shortName": "file-upload-skill",
+      "tier": "pro",
+      "status": "pro-planned",
+      "launchPhase": "Mature Pro - Month 6",
+      "coreFeature": "Image and file upload with storage and CDN config.",
+      "whyItSells": "S3 and R2 setup is painful.",
+      "private": true,
+      "weeklyDownloads": null,
+      "source": "skills/file-upload-skill"
     },
     {
       "name": "Firebase Setup",
@@ -45,8 +341,43 @@
         "continue"
       ],
       "shortName": "firebase-setup",
+      "tier": "free",
+      "status": "available",
+      "launchPhase": null,
+      "coreFeature": null,
+      "whyItSells": null,
+      "private": false,
       "weeklyDownloads": null,
       "source": "skills/firebase-setup"
+    },
+    {
+      "name": "Fullstack Scaffold Skill",
+      "package": "@skillsforllms/fullstack-scaffold-skill",
+      "version": "1.0.0",
+      "category": "fullstack",
+      "description": "AI skill: Database, API, and UI wired together.",
+      "tags": [
+        "fullstack",
+        "database",
+        "api",
+        "ui"
+      ],
+      "author": "Automata AI",
+      "compatibleAgents": [
+        "claude",
+        "cursor",
+        "copilot",
+        "continue"
+      ],
+      "shortName": "fullstack-scaffold-skill",
+      "tier": "pro",
+      "status": "pro-planned",
+      "launchPhase": "Launch Pro - Month 1",
+      "coreFeature": "Database, API, and UI wired together.",
+      "whyItSells": "Saves hours on every new project.",
+      "private": true,
+      "weeklyDownloads": null,
+      "source": "skills/fullstack-scaffold-skill"
     },
     {
       "name": "Nextjs Setup",
@@ -68,6 +399,12 @@
         "continue"
       ],
       "shortName": "nextjs-setup",
+      "tier": "free",
+      "status": "available",
+      "launchPhase": null,
+      "coreFeature": null,
+      "whyItSells": null,
+      "private": false,
       "weeklyDownloads": null,
       "source": "skills/nextjs-setup"
     },
@@ -92,8 +429,101 @@
         "continue"
       ],
       "shortName": "node-rest-api",
+      "tier": "free",
+      "status": "available",
+      "launchPhase": null,
+      "coreFeature": null,
+      "whyItSells": null,
+      "private": false,
       "weeklyDownloads": null,
       "source": "skills/node-rest-api"
+    },
+    {
+      "name": "Prisma Schema Skill",
+      "package": "@skillsforllms/prisma-schema-skill",
+      "version": "1.0.0",
+      "category": "backend",
+      "description": "AI skill: Generate Prisma models from plain text.",
+      "tags": [
+        "prisma",
+        "database",
+        "schema",
+        "models"
+      ],
+      "author": "Automata AI",
+      "compatibleAgents": [
+        "claude",
+        "cursor",
+        "copilot",
+        "continue"
+      ],
+      "shortName": "prisma-schema-skill",
+      "tier": "free",
+      "status": "available",
+      "launchPhase": "Tier 1 - Month 1",
+      "coreFeature": "Generate Prisma models from plain text.",
+      "whyItSells": null,
+      "private": false,
+      "weeklyDownloads": null,
+      "source": "skills/prisma-schema-skill"
+    },
+    {
+      "name": "Project Setup Skill",
+      "package": "@skillsforllms/project-setup-skill",
+      "version": "1.0.0",
+      "category": "web",
+      "description": "AI skill: Scaffold Next.js or Vite with a clean folder structure.",
+      "tags": [
+        "nextjs",
+        "vite",
+        "scaffold",
+        "typescript"
+      ],
+      "author": "Automata AI",
+      "compatibleAgents": [
+        "claude",
+        "cursor",
+        "copilot",
+        "continue"
+      ],
+      "shortName": "project-setup-skill",
+      "tier": "free",
+      "status": "available",
+      "launchPhase": "Tier 1 - Month 1",
+      "coreFeature": "Scaffold Next.js or Vite with a clean folder structure.",
+      "whyItSells": null,
+      "private": false,
+      "weeklyDownloads": null,
+      "source": "skills/project-setup-skill"
+    },
+    {
+      "name": "React Component Skill",
+      "package": "@skillsforllms/react-component-skill",
+      "version": "1.0.0",
+      "category": "web",
+      "description": "AI skill: Generate React components from a plain-language description.",
+      "tags": [
+        "react",
+        "components",
+        "typescript",
+        "ui"
+      ],
+      "author": "Automata AI",
+      "compatibleAgents": [
+        "claude",
+        "cursor",
+        "copilot",
+        "continue"
+      ],
+      "shortName": "react-component-skill",
+      "tier": "free",
+      "status": "available",
+      "launchPhase": "Tier 1 - Month 1",
+      "coreFeature": "Generate React components from a plain-language description.",
+      "whyItSells": null,
+      "private": false,
+      "weeklyDownloads": null,
+      "source": "skills/react-component-skill"
     },
     {
       "name": "React Setup",
@@ -115,15 +545,195 @@
         "continue"
       ],
       "shortName": "react-setup",
+      "tier": "free",
+      "status": "available",
+      "launchPhase": null,
+      "coreFeature": null,
+      "whyItSells": null,
+      "private": false,
       "weeklyDownloads": null,
       "source": "skills/react-setup"
     },
     {
-      "name": "React Skills Pack",
+      "name": "Readme Generator Skill",
+      "package": "@skillsforllms/readme-generator-skill",
+      "version": "1.0.0",
+      "category": "docs",
+      "description": "AI skill: Auto-write a clean README from project files.",
+      "tags": [
+        "readme",
+        "documentation",
+        "onboarding",
+        "developer-experience"
+      ],
+      "author": "Automata AI",
+      "compatibleAgents": [
+        "claude",
+        "cursor",
+        "copilot",
+        "continue"
+      ],
+      "shortName": "readme-generator-skill",
+      "tier": "free",
+      "status": "available",
+      "launchPhase": "Tier 2 - Month 2",
+      "coreFeature": "Auto-write a clean README from project files.",
+      "whyItSells": null,
+      "private": false,
+      "weeklyDownloads": null,
+      "source": "skills/readme-generator-skill"
+    },
+    {
+      "name": "Seo Skill",
+      "package": "@skillsforllms/seo-skill",
+      "version": "1.0.0",
+      "category": "marketing",
+      "description": "AI skill: Meta tags, sitemap, open graph images, and structured data.",
+      "tags": [
+        "seo",
+        "metadata",
+        "sitemap",
+        "structured-data"
+      ],
+      "author": "Automata AI",
+      "compatibleAgents": [
+        "claude",
+        "cursor",
+        "copilot",
+        "continue"
+      ],
+      "shortName": "seo-skill",
+      "tier": "pro",
+      "status": "pro-planned",
+      "launchPhase": "Mature Pro - Month 5",
+      "coreFeature": "Meta tags, sitemap, open graph images, and structured data.",
+      "whyItSells": "Freelancers and client-site builders need this constantly.",
+      "private": true,
+      "weeklyDownloads": null,
+      "source": "skills/seo-skill"
+    },
+    {
+      "name": "Sql Query Skill",
+      "package": "@skillsforllms/sql-query-skill",
+      "version": "1.0.0",
+      "category": "backend",
+      "description": "AI skill: Write SQL from natural language.",
+      "tags": [
+        "sql",
+        "postgres",
+        "mysql",
+        "queries"
+      ],
+      "author": "Automata AI",
+      "compatibleAgents": [
+        "claude",
+        "cursor",
+        "copilot",
+        "continue"
+      ],
+      "shortName": "sql-query-skill",
+      "tier": "free",
+      "status": "available",
+      "launchPhase": "Tier 2 - Month 2",
+      "coreFeature": "Write SQL from natural language.",
+      "whyItSells": null,
+      "private": false,
+      "weeklyDownloads": null,
+      "source": "skills/sql-query-skill"
+    },
+    {
+      "name": "Stripe Payment Skill",
+      "package": "@skillsforllms/stripe-payment-skill",
+      "version": "1.0.0",
+      "category": "payments",
+      "description": "AI skill: Checkout, webhooks, subscriptions, and billing state.",
+      "tags": [
+        "stripe",
+        "checkout",
+        "webhooks",
+        "subscriptions"
+      ],
+      "author": "Automata AI",
+      "compatibleAgents": [
+        "claude",
+        "cursor",
+        "copilot",
+        "continue"
+      ],
+      "shortName": "stripe-payment-skill",
+      "tier": "pro",
+      "status": "pro-planned",
+      "launchPhase": "Mature Pro - Month 4",
+      "coreFeature": "Checkout, webhooks, subscriptions, and billing state.",
+      "whyItSells": "Money flows are high priority and painful to debug.",
+      "private": true,
+      "weeklyDownloads": null,
+      "source": "skills/stripe-payment-skill"
+    },
+    {
+      "name": "Tailwind Ui Skill",
+      "package": "@skillsforllms/tailwind-ui-skill",
+      "version": "1.0.0",
+      "category": "web",
+      "description": "AI skill: Create ready-to-paste navbars, cards, modals, buttons, forms, and layout sections.",
+      "tags": [
+        "tailwind",
+        "ui",
+        "components",
+        "design-system"
+      ],
+      "author": "Automata AI",
+      "compatibleAgents": [
+        "claude",
+        "cursor",
+        "copilot",
+        "continue"
+      ],
+      "shortName": "tailwind-ui-skill",
+      "tier": "free",
+      "status": "available",
+      "launchPhase": "Tier 1 - Month 1",
+      "coreFeature": "Create ready-to-paste navbars, cards, modals, buttons, forms, and layout sections.",
+      "whyItSells": null,
+      "private": false,
+      "weeklyDownloads": null,
+      "source": "skills/tailwind-ui-skill"
+    },
+    {
+      "name": "Testing Skill",
+      "package": "@skillsforllms/testing-skill",
+      "version": "1.0.0",
+      "category": "quality",
+      "description": "AI skill: Generate Jest, Vitest, and Playwright tests.",
+      "tags": [
+        "jest",
+        "vitest",
+        "playwright",
+        "testing"
+      ],
+      "author": "Automata AI",
+      "compatibleAgents": [
+        "claude",
+        "cursor",
+        "copilot",
+        "continue"
+      ],
+      "shortName": "testing-skill",
+      "tier": "pro",
+      "status": "pro-planned",
+      "launchPhase": "Growth Pro - Month 2",
+      "coreFeature": "Generate Jest, Vitest, and Playwright tests.",
+      "whyItSells": "Developers know they should test but often skip it.",
+      "private": true,
+      "weeklyDownloads": null,
+      "source": "skills/testing-skill"
+    },
+    {
+      "name": "Reactskills",
       "package": "@skillsforllms/reactskills",
       "version": "1.0.0",
       "category": "web",
-      "description": "AI skill: 8 complete, production-ready React.js skill files covering components, hooks, state, forms, routing, testing, and performance.",
+      "description": "Production-ready React.js skills for LLM agents — covers components, hooks, state, routing, forms, testing, and performance patterns.",
       "tags": [
         "react",
         "hooks",
@@ -143,6 +753,12 @@
         "windsurf"
       ],
       "shortName": "reactskills",
+      "tier": "free",
+      "status": "available",
+      "launchPhase": null,
+      "coreFeature": null,
+      "whyItSells": null,
+      "private": false,
       "weeklyDownloads": null,
       "source": "reactskills"
     }

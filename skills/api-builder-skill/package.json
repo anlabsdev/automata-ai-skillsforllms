@@ -1,0 +1,54 @@
+{
+  "name": "@skillsforllms/api-builder-skill",
+  "version": "1.0.0",
+  "description": "AI skill: REST and tRPC endpoint generation.",
+  "keywords": [
+    "llm",
+    "ai-agent",
+    "skill",
+    "skillsforllms",
+    "rest",
+    "trpc",
+    "openapi",
+    "validation"
+  ],
+  "license": "SEE LICENSE IN LICENSE.md",
+  "author": "Automata AI",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anlabsdev/automata-ai-skillsforllms.git",
+    "directory": "skills/api-builder-skill"
+  },
+  "files": [
+    "SKILL.md",
+    "README.md",
+    "examples/"
+  ],
+  "skillsforllms": {
+    "category": "backend",
+    "tier": "pro",
+    "launchPhase": "Launch Pro - Month 1",
+    "coreFeature": "REST and tRPC endpoint generation.",
+    "whyItSells": "Every project needs APIs.",
+    "status": "pro-planned",
+    "tags": [
+      "rest",
+      "trpc",
+      "openapi",
+      "validation"
+    ],
+    "compatibleAgents": [
+      "claude",
+      "cursor",
+      "copilot",
+      "continue"
+    ]
+  },
+  "scripts": {
+    "build": "node -e \"console.log('skill package: no build needed')\"",
+    "check": "node -e \"console.log('skill package: no typecheck needed')\"",
+    "lint": "node -e \"console.log('skill package: no lint needed')\"",
+    "test": "node -e \"console.log('skill package: no tests needed')\""
+  }
+}

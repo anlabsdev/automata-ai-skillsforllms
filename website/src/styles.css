@@ -31,6 +31,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 80px;
 }
 
 body {
@@ -372,11 +373,13 @@ h2 {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
   gap: 1rem;
   margin: 2.5rem 0 2rem;
 }
 
-.category-tabs {
+.category-tabs,
+.tier-tabs {
   flex-wrap: wrap;
   gap: 8px;
 }
@@ -405,6 +408,33 @@ h2 {
 .tab-btn.active {
   border-color: var(--accent);
   color: var(--accent);
+}
+
+.tier-tabs {
+  display: flex;
+  align-items: center;
+  border: 0.5px solid var(--border);
+  border-radius: 8px;
+  padding: 3px;
+  background: var(--bg2);
+}
+
+.tier-btn {
+  border-radius: 6px;
+  padding: 6px 12px;
+  background: transparent;
+  color: var(--text3);
+  font-family: var(--mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.tier-btn:hover,
+.tier-btn.active {
+  background: var(--surface);
+  color: var(--text);
 }
 
 .registry-search {
@@ -541,11 +571,54 @@ h2 {
   white-space: nowrap;
 }
 
+.skill-badges {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: flex-end;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.tier-badge {
+  border: 0.5px solid var(--border2);
+  border-radius: 5px;
+  padding: 3px 8px;
+  font-family: var(--mono);
+  font-size: 10px;
+  line-height: 1;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.tier-badge.free,
+.detail-tier.free {
+  border-color: rgba(77, 255, 195, 0.25);
+  background: rgba(77, 255, 195, 0.08);
+  color: var(--accent2);
+}
+
+.tier-badge.pro,
+.detail-tier.pro {
+  border-color: rgba(255, 179, 71, 0.28);
+  background: rgba(255, 179, 71, 0.09);
+  color: var(--accent4);
+}
+
 .skill-desc {
   color: var(--text2);
   font-size: 13px;
   font-weight: 300;
   line-height: 1.6;
+}
+
+.skill-phase {
+  width: fit-content;
+  border: 0.5px solid var(--border);
+  border-radius: 5px;
+  padding: 3px 8px;
+  color: var(--text3);
+  font-family: var(--mono);
+  font-size: 10px;
 }
 
 .skill-tags {
@@ -644,6 +717,99 @@ h2 {
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   background: var(--border);
+}
+
+.roadmap-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 5rem 2.5rem;
+}
+
+.roadmap-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(180px, 1fr));
+  gap: 1px;
+  overflow: hidden;
+  margin-top: 3rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--border);
+}
+
+.roadmap-column {
+  min-width: 0;
+  background: var(--bg2);
+}
+
+.roadmap-column-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  border-bottom: 0.5px solid var(--border);
+  padding: 1rem;
+}
+
+.roadmap-column-head h3 {
+  color: var(--text);
+  font-family: var(--serif);
+  font-size: 1rem;
+  line-height: 1.2;
+}
+
+.roadmap-column-head span {
+  display: inline-flex;
+  width: 26px;
+  height: 26px;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  border: 0.5px solid var(--border2);
+  border-radius: 6px;
+  color: var(--accent2);
+  font-family: var(--mono);
+  font-size: 11px;
+}
+
+.roadmap-items {
+  display: grid;
+}
+
+.roadmap-item {
+  display: grid;
+  gap: 6px;
+  width: 100%;
+  border-bottom: 0.5px solid var(--border);
+  padding: 1rem;
+  background: transparent;
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.roadmap-item:hover {
+  background: var(--bg3);
+}
+
+.roadmap-item strong {
+  color: var(--text);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.roadmap-item span {
+  color: var(--text2);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.roadmap-item.pro strong {
+  color: var(--accent4);
+}
+
+.roadmap-item.free strong {
+  color: var(--accent2);
 }
 
 .workflow-step {
@@ -1073,6 +1239,18 @@ h2 {
   font-size: 12px;
 }
 
+.detail-tier {
+  display: inline-flex;
+  width: fit-content;
+  margin-top: 0.75rem;
+  border: 0.5px solid var(--border2);
+  border-radius: 6px;
+  padding: 4px 9px;
+  font-family: var(--mono);
+  font-size: 11px;
+  text-transform: uppercase;
+}
+
 .modal-close {
   display: inline-flex;
   width: 34px;
@@ -1149,6 +1327,7 @@ h2 {
 
 @media (max-width: 900px) {
   .workflow-grid,
+  .roadmap-grid,
   .install-grid,
   .package-flow,
   .skill-detail-grid,
@@ -1172,6 +1351,10 @@ h2 {
   .registry-toolbar {
     align-items: stretch;
     flex-direction: column;
+  }
+
+  .tier-tabs {
+    width: fit-content;
   }
 
   .registry-search {
@@ -1221,6 +1404,11 @@ h2 {
   .skill-footer {
     align-items: flex-start;
     flex-direction: column;
+  }
+
+  .skill-badges {
+    align-items: flex-start;
+    flex-direction: row;
   }
 
   .cta-inner,

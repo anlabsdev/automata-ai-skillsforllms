@@ -12,6 +12,7 @@ coverage/
 .skills/
 .skills-*/
 .devserver.*.log
+.website-dev.*.log
 
 # OS / IDE junk
 desktop.ini

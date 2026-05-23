@@ -1,0 +1,54 @@
+{
+  "name": "@skillsforllms/stripe-payment-skill",
+  "version": "1.0.0",
+  "description": "AI skill: Checkout, webhooks, subscriptions, and billing state.",
+  "keywords": [
+    "llm",
+    "ai-agent",
+    "skill",
+    "skillsforllms",
+    "stripe",
+    "checkout",
+    "webhooks",
+    "subscriptions"
+  ],
+  "license": "SEE LICENSE IN LICENSE.md",
+  "author": "Automata AI",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anlabsdev/automata-ai-skillsforllms.git",
+    "directory": "skills/stripe-payment-skill"
+  },
+  "files": [
+    "SKILL.md",
+    "README.md",
+    "examples/"
+  ],
+  "skillsforllms": {
+    "category": "payments",
+    "tier": "pro",
+    "launchPhase": "Mature Pro - Month 4",
+    "coreFeature": "Checkout, webhooks, subscriptions, and billing state.",
+    "whyItSells": "Money flows are high priority and painful to debug.",
+    "status": "pro-planned",
+    "tags": [
+      "stripe",
+      "checkout",
+      "webhooks",
+      "subscriptions"
+    ],
+    "compatibleAgents": [
+      "claude",
+      "cursor",
+      "copilot",
+      "continue"
+    ]
+  },
+  "scripts": {
+    "build": "node -e \"console.log('skill package: no build needed')\"",
+    "check": "node -e \"console.log('skill package: no typecheck needed')\"",
+    "lint": "node -e \"console.log('skill package: no lint needed')\"",
+    "test": "node -e \"console.log('skill package: no tests needed')\""
+  }
+}

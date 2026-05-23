@@ -1,0 +1,29 @@
+{
+  "name": "Project Setup Skill",
+  "package": "@skillsforllms/project-setup-skill",
+  "version": "1.0.0",
+  "category": "web",
+  "description": "AI skill: Scaffold Next.js or Vite with a clean folder structure.",
+  "tags": [
+    "nextjs",
+    "vite",
+    "scaffold",
+    "typescript"
+  ],
+  "author": "Automata AI",
+  "compatibleAgents": [
+    "claude",
+    "cursor",
+    "copilot",
+    "continue"
+  ],
+  "shortName": "project-setup-skill",
+  "tier": "free",
+  "status": "available",
+  "launchPhase": "Tier 1 - Month 1",
+  "coreFeature": "Scaffold Next.js or Vite with a clean folder structure.",
+  "whyItSells": null,
+  "private": false,
+  "weeklyDownloads": null,
+  "source": "skills/project-setup-skill"
+}

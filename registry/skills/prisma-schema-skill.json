@@ -1,0 +1,29 @@
+{
+  "name": "Prisma Schema Skill",
+  "package": "@skillsforllms/prisma-schema-skill",
+  "version": "1.0.0",
+  "category": "backend",
+  "description": "AI skill: Generate Prisma models from plain text.",
+  "tags": [
+    "prisma",
+    "database",
+    "schema",
+    "models"
+  ],
+  "author": "Automata AI",
+  "compatibleAgents": [
+    "claude",
+    "cursor",
+    "copilot",
+    "continue"
+  ],
+  "shortName": "prisma-schema-skill",
+  "tier": "free",
+  "status": "available",
+  "launchPhase": "Tier 1 - Month 1",
+  "coreFeature": "Generate Prisma models from plain text.",
+  "whyItSells": null,
+  "private": false,
+  "weeklyDownloads": null,
+  "source": "skills/prisma-schema-skill"
+}

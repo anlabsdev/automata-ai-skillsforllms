@@ -1,0 +1,54 @@
+{
+  "name": "@skillsforllms/testing-skill",
+  "version": "1.0.0",
+  "description": "AI skill: Generate Jest, Vitest, and Playwright tests.",
+  "keywords": [
+    "llm",
+    "ai-agent",
+    "skill",
+    "skillsforllms",
+    "jest",
+    "vitest",
+    "playwright",
+    "testing"
+  ],
+  "license": "SEE LICENSE IN LICENSE.md",
+  "author": "Automata AI",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anlabsdev/automata-ai-skillsforllms.git",
+    "directory": "skills/testing-skill"
+  },
+  "files": [
+    "SKILL.md",
+    "README.md",
+    "examples/"
+  ],
+  "skillsforllms": {
+    "category": "quality",
+    "tier": "pro",
+    "launchPhase": "Growth Pro - Month 2",
+    "coreFeature": "Generate Jest, Vitest, and Playwright tests.",
+    "whyItSells": "Developers know they should test but often skip it.",
+    "status": "pro-planned",
+    "tags": [
+      "jest",
+      "vitest",
+      "playwright",
+      "testing"
+    ],
+    "compatibleAgents": [
+      "claude",
+      "cursor",
+      "copilot",
+      "continue"
+    ]
+  },
+  "scripts": {
+    "build": "node -e \"console.log('skill package: no build needed')\"",
+    "check": "node -e \"console.log('skill package: no typecheck needed')\"",
+    "lint": "node -e \"console.log('skill package: no lint needed')\"",
+    "test": "node -e \"console.log('skill package: no tests needed')\""
+  }
+}

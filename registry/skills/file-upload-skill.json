@@ -1,0 +1,29 @@
+{
+  "name": "File Upload Skill",
+  "package": "@skillsforllms/file-upload-skill",
+  "version": "1.0.0",
+  "category": "storage",
+  "description": "AI skill: Image and file upload with storage and CDN config.",
+  "tags": [
+    "s3",
+    "r2",
+    "uploads",
+    "cdn"
+  ],
+  "author": "Automata AI",
+  "compatibleAgents": [
+    "claude",
+    "cursor",
+    "copilot",
+    "continue"
+  ],
+  "shortName": "file-upload-skill",
+  "tier": "pro",
+  "status": "pro-planned",
+  "launchPhase": "Mature Pro - Month 6",
+  "coreFeature": "Image and file upload with storage and CDN config.",
+  "whyItSells": "S3 and R2 setup is painful.",
+  "private": true,
+  "weeklyDownloads": null,
+  "source": "skills/file-upload-skill"
+}

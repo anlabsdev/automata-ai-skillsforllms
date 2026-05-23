@@ -29,6 +29,12 @@ type Skill = {
   author: string;
   compatibleAgents: string[];
   shortName: string;
+  tier?: "free" | "pro";
+  status?: string;
+  launchPhase?: string | null;
+  coreFeature?: string | null;
+  whyItSells?: string | null;
+  private?: boolean;
 };
 
 const skills = registry.skills as Skill[];
@@ -40,11 +46,21 @@ const categoryLabels: Record<string, string> = {
   all: "All",
   web: "Web",
   backend: "Backend",
-  security: "DevOps / Auth"
+  security: "Security",
+  devops: "DevOps",
+  docs: "Docs",
+  fullstack: "Fullstack",
+  quality: "Quality",
+  ai: "AI",
+  payments: "Payments",
+  communications: "Email",
+  marketing: "Marketing",
+  storage: "Storage"
 };
 
 function App() {
   const [category, setCategory] = useState("all");
+  const [tier, setTier] = useState("all");
   const [query, setQuery] = useState("");
   const [selectedSkill, setSelectedSkill] = useState<Skill | null>(null);
   const [toast, setToast] = useState("");
@@ -58,17 +74,36 @@ function App() {
 
     return skills.filter((skill) => {
       const matchesCategory = category === "all" || skill.category === category;
+      const skillTier = skill.tier ?? "free";
+      const matchesTier = tier === "all" || skillTier === tier;
       const searchable = [
         skill.name,
         skill.package,
         skill.description,
         skill.category,
+        skillTier,
+        skill.launchPhase ?? "",
+        skill.coreFeature ?? "",
         ...skill.tags
       ].join(" ").toLowerCase();
 
-      return matchesCategory && (!needle || searchable.includes(needle));
+      return matchesCategory && matchesTier && (!needle || searchable.includes(needle));
     });
-  }, [category, query]);
+  }, [category, tier, query]);
+
+  const roadmapSkills = useMemo(() => skills.filter((skill) => Boolean(skill.launchPhase)), []);
+  const freeRoadmapSkills = useMemo(() => roadmapSkills.filter((skill) => (skill.tier ?? "free") === "free"), [roadmapSkills]);
+  const proRoadmapSkills = useMemo(() => roadmapSkills.filter((skill) => skill.tier === "pro"), [roadmapSkills]);
+
+  useEffect(() => {
+    if (!window.location.hash) return;
+    const target = document.querySelector(window.location.hash);
+    if (!target) return;
+    window.requestAnimationFrame(() => {
+      const top = target.getBoundingClientRect().top + window.scrollY - 80;
+      window.scrollTo({ top, behavior: "auto" });
+    });
+  }, []);
 
   async function copy(value: string) {
     try {
@@ -100,6 +135,7 @@ function App() {
         </a>
         <nav className="nav" aria-label="Primary navigation">
           <a href="#skills">Skills</a>
+          <a href="#roadmap">Roadmap</a>
           <a href="#workflow">Workflow</a>
           <a href="#npm">NPM</a>
           <a href="#install">Install</a>
@@ -140,10 +176,11 @@ function App() {
           </div>
 
           <div className="hero-stats">
-            <Stat value={String(skills.length)} label="Seed Skills" />
+          <Stat value={String(skills.length)} label="Seed Skills" />
+            <Stat value={String(freeRoadmapSkills.length)} label="Free Roadmap" />
+            <Stat value={String(proRoadmapSkills.length)} label="Pro Roadmap" />
             <Stat value={String(categories.length - 1)} label="Categories" />
-            <Stat value="npm" label="Registry" />
-            <Stat value="MIT" label="License" />
+            <Stat value="Paddle" label="Pro Checkout" />
           </div>
 
           <div className="hero-agents">
@@ -179,6 +216,19 @@ function App() {
               ))}
             </div>
 
+            <div className="tier-tabs" aria-label="Tier filters">
+              {["all", "free", "pro"].map((item) => (
+                <button
+                  className={`tier-btn ${tier === item ? "active" : ""}`}
+                  key={item}
+                  type="button"
+                  onClick={() => setTier(item)}
+                >
+                  {titleCase(item)}
+                </button>
+              ))}
+            </div>
+
             <label className="registry-search">
               <Search size={15} />
               <input
@@ -203,8 +253,31 @@ function App() {
           </div>
         </section>
 
+        <section className="roadmap-section" id="roadmap">
+          <div className="section-label">02 / Build Roadmap</div>
+          <h2>Free skills build trust. Pro skills sell outcomes.</h2>
+          <p className="section-desc">
+            Month 1 ships the viral free utilities and the four paid skills most likely to prove value quickly.
+          </p>
+
+          <div className="roadmap-grid">
+            <RoadmapColumn title="Month 1 Free" skills={skillsForPhase("Tier 1 - Month 1")} />
+            <RoadmapColumn title="Month 1 Pro" skills={skillsForPhase("Launch Pro - Month 1")} />
+            <RoadmapColumn title="Month 2 Free" skills={skillsForPhase("Tier 2 - Month 2")} />
+            <RoadmapColumn title="Growth Pro" skills={[
+              ...skillsForPhase("Growth Pro - Month 2"),
+              ...skillsForPhase("Growth Pro - Month 3")
+            ]} />
+            <RoadmapColumn title="Mature Pro" skills={[
+              ...skillsForPhase("Mature Pro - Month 4"),
+              ...skillsForPhase("Mature Pro - Month 5"),
+              ...skillsForPhase("Mature Pro - Month 6")
+            ]} />
+          </div>
+        </section>
+
         <section className="section" id="workflow">
-          <div className="section-label">02 / Workflow</div>
+          <div className="section-label">03 / Workflow</div>
           <h2>Create, test, publish, reuse.</h2>
           <p className="section-desc">
             Skills are living packages. They get sharper, safer, and more capable with each version.
@@ -249,7 +322,7 @@ function App() {
         </section>
 
         <section className="package-section" id="npm">
-          <div className="section-label">03 / NPM Package Model</div>
+          <div className="section-label">04 / NPM Package Model</div>
           <h2>How users install a skill in their project.</h2>
           <p className="section-desc">
             Ship each skill as a tiny npm package. The package contains instructions, examples, and metadata; the CLI copies it into the user's project.
@@ -291,7 +364,7 @@ function App() {
         </section>
 
         <section className="install-section" id="install">
-          <div className="section-label">04 / Installation</div>
+          <div className="section-label">05 / Installation</div>
           <h2>Get started in 30 seconds.</h2>
           <p className="section-desc">
             Install the CLI and a skill package, then sync the skill instructions into the project.
@@ -338,7 +411,7 @@ function App() {
         </section>
 
         <section className="docs-section" id="docs">
-          <div className="section-label">05 / Documentation</div>
+          <div className="section-label">06 / Documentation</div>
           <h2>Everything you need to know.</h2>
           <p className="section-desc">
             From first install to authoring your own skills — quick reference for the full SkillsForLLMs workflow.
@@ -403,7 +476,7 @@ function App() {
         <section className="cta-section" id="build">
           <div className="cta-inner">
             <div>
-              <p className="eyebrow">05 / Contribute</p>
+              <p className="eyebrow">07 / Contribute</p>
               <h2 className="cta-title">Build a skill,<br />publish your work.</h2>
               <p className="cta-sub">
                 Use `create-skill` to scaffold a compliant package, validate the SKILL.md, and submit it to the registry.
@@ -451,6 +524,10 @@ function App() {
   );
 }
 
+function skillsForPhase(phase: string) {
+  return skills.filter((skill) => skill.launchPhase === phase);
+}
+
 function SkillCard({
   skill,
   onOpen,
@@ -460,6 +537,8 @@ function SkillCard({
   onOpen: () => void;
   onCopy: (value: string) => void;
 }) {
+  const isPro = skill.tier === "pro" || skill.private;
+
   return (
     <article
       className="skill-card"
@@ -490,9 +569,13 @@ function SkillCard({
             {skill.package}
           </div>
         </div>
-        <span className="skill-version">v{skill.version}</span>
+        <div className="skill-badges">
+          <span className={`tier-badge ${isPro ? "pro" : "free"}`}>{isPro ? "Pro" : "Free"}</span>
+          <span className="skill-version">v{skill.version}</span>
+        </div>
       </div>
-      <p className="skill-desc">{skill.description}</p>
+      <p className="skill-desc">{skill.coreFeature ?? skill.description}</p>
+      {skill.launchPhase ? <div className="skill-phase">{skill.launchPhase}</div> : null}
       <div className="skill-tags">
         {skill.tags.slice(0, 4).map((tag) => <span className="tag" key={tag}>{tag}</span>)}
       </div>
@@ -516,10 +599,14 @@ function SkillCard({
             type="button"
             onClick={(event) => {
               event.stopPropagation();
-              onCopy(installCommand(skill));
+              if (isPro) {
+                onOpen();
+              } else {
+                onCopy(installCommand(skill));
+              }
             }}
           >
-            Install
+            {isPro ? "Pro" : "Install"}
           </button>
         </div>
       </div>
@@ -536,6 +623,8 @@ function SkillDetailModal({
   onClose: () => void;
   onCopy: (value: string) => void;
 }) {
+  const isPro = skill.tier === "pro" || skill.private;
+
   return (
     <div className="skill-detail-modal show" role="dialog" aria-modal="true" aria-labelledby="skill-detail-title" onMouseDown={onClose}>
       <div className="skill-detail-dialog" onMouseDown={(event) => event.stopPropagation()}>
@@ -543,6 +632,7 @@ function SkillDetailModal({
           <div>
             <div className="skill-detail-kicker">{categoryLabels[skill.category] ?? titleCase(skill.category)}</div>
             <h3 id="skill-detail-title">{skill.name}</h3>
+            <div className={`detail-tier ${isPro ? "pro" : "free"}`}>{isPro ? "Pro Skill" : "Free Skill"}{skill.launchPhase ? ` / ${skill.launchPhase}` : ""}</div>
             <div
               className="skill-detail-package"
               title="Click to copy package name"
@@ -559,7 +649,7 @@ function SkillDetailModal({
         <div className="skill-detail-body">
           <div className="detail-block">
             <strong>What this skill does</strong>
-            <p>{skill.description}</p>
+            <p>{skill.coreFeature ?? skill.description}</p>
           </div>
           <div className="skill-detail-grid">
             <div className="detail-block">
@@ -572,22 +662,55 @@ function SkillDetailModal({
               </ul>
             </div>
             <div className="detail-block">
-              <strong>Best for</strong>
-              <p>{skill.tags.join(", ")} projects that need reusable agent guidance.</p>
+              <strong>{isPro ? "Why it sells" : "Best for"}</strong>
+              <p>{isPro ? skill.whyItSells ?? "High-value project automation that saves implementation time." : `${skill.tags.join(", ")} projects that need reusable agent guidance.`}</p>
             </div>
           </div>
           <div className="detail-block">
             <strong>Example prompt</strong>
             <p>Read `.skills/{skill.shortName}/SKILL.md` and follow those conventions while implementing this feature.</p>
           </div>
-          <div className="detail-code">{installCommand(skill)}{`\n\n# Result\n.skills/${skill.shortName}/SKILL.md\n.skills/INDEX.md`}</div>
+          <div className="detail-code">{isPro ? proAccessCopy(skill) : installCommand(skill)}{isPro ? "" : `\n\n# Result\n.skills/${skill.shortName}/SKILL.md\n.skills/INDEX.md`}</div>
           <div className="detail-actions">
-            <button className="btn btn-primary" type="button" onClick={() => onCopy(installCommand(skill))}>Copy install command</button>
-            <button className="btn btn-ghost" type="button" onClick={() => onCopy(`npm install -D ${skill.package}`)}>Copy npm package install</button>
+            {isPro ? (
+              <>
+                <a className="btn btn-primary" href={`mailto:anlabs.dev@gmail.com?subject=${encodeURIComponent(`Pro access: ${skill.name}`)}`}>Request Pro access</a>
+                <button className="btn btn-ghost" type="button" onClick={() => onCopy(proAccessCopy(skill))}>Copy Pro note</button>
+              </>
+            ) : (
+              <>
+                <button className="btn btn-primary" type="button" onClick={() => onCopy(installCommand(skill))}>Copy install command</button>
+                <button className="btn btn-ghost" type="button" onClick={() => onCopy(`npm install -D ${skill.package}`)}>Copy npm package install</button>
+              </>
+            )}
           </div>
         </div>
       </div>
     </div>
+  );
+}
+
+function RoadmapColumn({ title, skills }: { title: string; skills: Skill[] }) {
+  return (
+    <article className="roadmap-column">
+      <div className="roadmap-column-head">
+        <h3>{title}</h3>
+        <span>{skills.length}</span>
+      </div>
+      <div className="roadmap-items">
+        {skills.map((skill) => (
+          <button
+            className={`roadmap-item ${(skill.tier ?? "free") === "pro" ? "pro" : "free"}`}
+            key={skill.package}
+            type="button"
+            onClick={() => document.getElementById("skills")?.scrollIntoView({ behavior: "smooth" })}
+          >
+            <strong>{skill.name}</strong>
+            <span>{skill.coreFeature ?? skill.description}</span>
+          </button>
+        ))}
+      </div>
+    </article>
   );
 }
 
@@ -676,6 +799,10 @@ function DocsCard({ icon, title, items }: { icon: React.ReactNode; title: string
 
 function installCommand(skill: Skill) {
   return `npm install -D ${skill.package} skillsforllms\nnpx skillsforllms sync ${skill.package}`;
+}
+
+function proAccessCopy(skill: Skill) {
+  return `${skill.name} is marked as a Pro skill. Recommended checkout path: Paddle for global cards/wallets, with Razorpay as an India-focused option later. After payment, issue an entitlement/license and allow the CLI to sync ${skill.package}.`;
 }
 
 function visualCategory(category: string) {

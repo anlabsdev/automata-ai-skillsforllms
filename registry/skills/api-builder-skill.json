@@ -1,0 +1,29 @@
+{
+  "name": "Api Builder Skill",
+  "package": "@skillsforllms/api-builder-skill",
+  "version": "1.0.0",
+  "category": "backend",
+  "description": "AI skill: REST and tRPC endpoint generation.",
+  "tags": [
+    "rest",
+    "trpc",
+    "openapi",
+    "validation"
+  ],
+  "author": "Automata AI",
+  "compatibleAgents": [
+    "claude",
+    "cursor",
+    "copilot",
+    "continue"
+  ],
+  "shortName": "api-builder-skill",
+  "tier": "pro",
+  "status": "pro-planned",
+  "launchPhase": "Launch Pro - Month 1",
+  "coreFeature": "REST and tRPC endpoint generation.",
+  "whyItSells": "Every project needs APIs.",
+  "private": true,
+  "weeklyDownloads": null,
+  "source": "skills/api-builder-skill"
+}

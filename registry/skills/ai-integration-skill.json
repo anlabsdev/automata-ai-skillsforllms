@@ -1,0 +1,29 @@
+{
+  "name": "Ai Integration Skill",
+  "package": "@skillsforllms/ai-integration-skill",
+  "version": "1.0.0",
+  "category": "ai",
+  "description": "AI skill: Add Claude, OpenAI, RAG, and agent flows to existing apps.",
+  "tags": [
+    "openai",
+    "claude",
+    "rag",
+    "agents"
+  ],
+  "author": "Automata AI",
+  "compatibleAgents": [
+    "claude",
+    "cursor",
+    "copilot",
+    "continue"
+  ],
+  "shortName": "ai-integration-skill",
+  "tier": "pro",
+  "status": "pro-planned",
+  "launchPhase": "Growth Pro - Month 3",
+  "coreFeature": "Add Claude, OpenAI, RAG, and agent flows to existing apps.",
+  "whyItSells": "AI integration is a high-demand feature.",
+  "private": true,
+  "weeklyDownloads": null,
+  "source": "skills/ai-integration-skill"
+}

@@ -1,0 +1,29 @@
+{
+  "name": "Auth System Skill",
+  "package": "@skillsforllms/auth-system-skill",
+  "version": "1.0.0",
+  "category": "security",
+  "description": "AI skill: JWT, OAuth, sessions, and role-based access.",
+  "tags": [
+    "auth",
+    "oauth",
+    "jwt",
+    "rbac"
+  ],
+  "author": "Automata AI",
+  "compatibleAgents": [
+    "claude",
+    "cursor",
+    "copilot",
+    "continue"
+  ],
+  "shortName": "auth-system-skill",
+  "tier": "pro",
+  "status": "pro-planned",
+  "launchPhase": "Launch Pro - Month 1",
+  "coreFeature": "JWT, OAuth, sessions, and role-based access.",
+  "whyItSells": "Every app needs auth, and most teams dislike rebuilding it.",
+  "private": true,
+  "weeklyDownloads": null,
+  "source": "skills/auth-system-skill"
+}

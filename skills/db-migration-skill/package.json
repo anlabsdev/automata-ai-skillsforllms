@@ -1,0 +1,54 @@
+{
+  "name": "@skillsforllms/db-migration-skill",
+  "version": "1.0.0",
+  "description": "AI skill: Safe migration scripts for Postgres and MySQL.",
+  "keywords": [
+    "llm",
+    "ai-agent",
+    "skill",
+    "skillsforllms",
+    "postgres",
+    "mysql",
+    "migrations",
+    "database"
+  ],
+  "license": "SEE LICENSE IN LICENSE.md",
+  "author": "Automata AI",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anlabsdev/automata-ai-skillsforllms.git",
+    "directory": "skills/db-migration-skill"
+  },
+  "files": [
+    "SKILL.md",
+    "README.md",
+    "examples/"
+  ],
+  "skillsforllms": {
+    "category": "backend",
+    "tier": "pro",
+    "launchPhase": "Growth Pro - Month 2",
+    "coreFeature": "Safe migration scripts for Postgres and MySQL.",
+    "whyItSells": "Migrations break things, and teams pay to avoid data loss.",
+    "status": "pro-planned",
+    "tags": [
+      "postgres",
+      "mysql",
+      "migrations",
+      "database"
+    ],
+    "compatibleAgents": [
+      "claude",
+      "cursor",
+      "copilot",
+      "continue"
+    ]
+  },
+  "scripts": {
+    "build": "node -e \"console.log('skill package: no build needed')\"",
+    "check": "node -e \"console.log('skill package: no typecheck needed')\"",
+    "lint": "node -e \"console.log('skill package: no lint needed')\"",
+    "test": "node -e \"console.log('skill package: no tests needed')\""
+  }
+}

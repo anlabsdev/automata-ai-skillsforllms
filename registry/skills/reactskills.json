@@ -1,0 +1,34 @@
+{
+  "name": "Reactskills",
+  "package": "@skillsforllms/reactskills",
+  "version": "1.0.0",
+  "category": "web",
+  "description": "Production-ready React.js skills for LLM agents — covers components, hooks, state, routing, forms, testing, and performance patterns.",
+  "tags": [
+    "react",
+    "hooks",
+    "components",
+    "state",
+    "routing",
+    "forms",
+    "testing",
+    "performance"
+  ],
+  "author": "ANlabs",
+  "compatibleAgents": [
+    "claude",
+    "cursor",
+    "copilot",
+    "continue",
+    "windsurf"
+  ],
+  "shortName": "reactskills",
+  "tier": "free",
+  "status": "available",
+  "launchPhase": null,
+  "coreFeature": null,
+  "whyItSells": null,
+  "private": false,
+  "weeklyDownloads": null,
+  "source": "reactskills"
+}

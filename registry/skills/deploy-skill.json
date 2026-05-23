@@ -1,0 +1,29 @@
+{
+  "name": "Deploy Skill",
+  "package": "@skillsforllms/deploy-skill",
+  "version": "1.0.0",
+  "category": "devops",
+  "description": "AI skill: Dockerfile, GitHub Actions, Vercel, and Railway config.",
+  "tags": [
+    "docker",
+    "github-actions",
+    "vercel",
+    "railway"
+  ],
+  "author": "Automata AI",
+  "compatibleAgents": [
+    "claude",
+    "cursor",
+    "copilot",
+    "continue"
+  ],
+  "shortName": "deploy-skill",
+  "tier": "pro",
+  "status": "pro-planned",
+  "launchPhase": "Growth Pro - Month 3",
+  "coreFeature": "Dockerfile, GitHub Actions, Vercel, and Railway config.",
+  "whyItSells": "Deployment is scary for juniors and costly for teams.",
+  "private": true,
+  "weeklyDownloads": null,
+  "source": "skills/deploy-skill"
+}
